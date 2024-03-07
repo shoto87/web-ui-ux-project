@@ -5,3 +5,7 @@ deactivate
 python manage.py runserver
 
 git pull origin main
+
+src="{% static 'type_folder/fileName' %}"
+
+href="{% static 'type_folder/fileName' %}

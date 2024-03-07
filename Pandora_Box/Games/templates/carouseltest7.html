@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="ar" dir="rtl">
 
@@ -11,8 +12,8 @@
         integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
     <title>main page</title>
     <link rel="png" href="lol.png">
-    <link rel="stylesheet" href="carouseltest7.css">
-    <script src="carouseltest6.js"></script>
+    <link rel="stylesheet" href="{% static 'css/carouseltest7.css' %}">
+    <script src="{% static 'js/carouseltest6.js' %}"></script>
 </head>
 <style>
 </style>
@@ -25,11 +26,11 @@
         </div>
         <nav>
             <ul>
-                <li class="store"><a href="carouseltest7.html">STORE</a></li>
-                <li class="community"><a href="community.html">COMMUNITY</a></li>
-                <li class="about"><a href="about.html">ABOUT</a>
+                <li class="store"><a href="{% url 'carouseltest7' %}">STORE</a></li>
+                <li class="community"><a href="{% url 'community' %}">COMMUNITY</a></li>
+                <li class="about"><a href="{% url 'about' %}">ABOUT</a>
                 </li>
-                <li class="support"><a href="support.html">SUPPORT</a></li>
+                <li class="support"><a href="{% url 'support' %}">SUPPORT</a></li>
                 <li class="Download"><a href="#">install pandora's<sup>box</sup></a></li>
             </ul>
         </nav>
@@ -50,7 +51,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item ">
                     <div class="fort">
-                        <img src="fort.png">
+                        <img src="{% static 'images\fort.png' %}">
                         <div class="carousel-caption d-none d-md-block">
                             <h5></h5>
                             <p></p>
@@ -60,7 +61,7 @@
                 </div>
                 <div class="carousel-item active">
                     <div class="apex">
-                        <img src="apex.png">
+                        <img src="{% static 'images/apex.png' %}">
                         <div class="carousel-caption d-none d-md-block">
                             <h5></h5>
                             <p></p>
@@ -71,7 +72,7 @@
                 <div class="carousel-item">
 
                     <div class="lol">
-                        <img class="img1" src="lol.png">
+                        <img class="img1" src="{% static 'images/lol.png' %}">
                         <div class="carousel-caption d-none d-md-block">
                             <h5></h5>
                             <p></p>
@@ -81,7 +82,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="prince">
-                        <img src="prince.png">
+                        <img src="{% static 'images/prince.png' %}">
 
                         <div class="carousel-caption d-none d-md-block">
                             <h5></h5>
@@ -148,7 +149,7 @@
                         <li>
                             <div class="gta">
                                 <div>
-                                    <img src="gta.png" onclick="lol()">
+                                    <img src="{% static 'images/gta.png' %}" onclick="lol()">
                                 </div>
 
                                 <!-- <div class="carousel-caption d-none d-md-block">
@@ -161,7 +162,7 @@
                         <li>
                             <div class="nfs">
                                 <div>
-                                    <img src="nfs.png">
+                                    <img src="{% static 'images/nfs.png' %}">
 
                                 </div>
 
@@ -175,7 +176,7 @@
                         <li>
                             <div class="pop">
                                 <div>
-                                    <img src="pop.png">
+                                    <img src="{% static 'images/pop.png' %}">
                                 </div>
 
                                 <!-- <div class="carousel-caption d-none d-md-block">
@@ -188,7 +189,7 @@
                         <li>
                             <div class="farcry">
                                 <div>
-                                    <img src="farcry.png">
+                                    <img src="{% static 'images/farcry.png' %}">
                                 </div>
 
                                 <!-- <div class="carousel-caption d-none d-md-block">
@@ -206,7 +207,7 @@
                         <li>
                             <div class="assa">
                                 <div>
-                                    <img src="assasins.png">
+                                    <img src="{% static 'images/assasins.png' %}">
                                 </div>
 
 
@@ -220,7 +221,7 @@
                         <li>
                             <div class="evil">
                                 <div>
-                                    <img src="resident evil.png">
+                                    <img src="{% static 'images/resident evil.png' %}">
                                 </div>
 
 
@@ -234,7 +235,7 @@
                         <li>
                             <div class="rdr">
                                 <div>
-                                    <img src="red dead 2.png">
+                                    <img src="{% static 'images/red dead 2.png' %}">
                                 </div>
 
 
@@ -248,7 +249,7 @@
                         <li>
                             <div class="mk11">
                                 <div>
-                                    <img src="mk11.png">
+                                    <img src="{% static 'images/mk11.png' %}">
                                 </div>
 
 
@@ -279,7 +280,7 @@
                         <li>
                             <div class="god">
                                 <div>
-                                    <img src="god.png">
+                                    <img src="{% static 'images/god.png' %}">
 
                                 </div>
                                 <!-- <div class="carousel-caption d-none d-md-block"> -->
@@ -293,7 +294,7 @@
                         <li>
                             <div class="gta">
                                 <div>
-                                    <img src="gta.png">
+                                    <img src="{% static 'images/gta.png' %}">
                                 </div>
 
                                 <!-- 
@@ -307,7 +308,7 @@
                         <li>
                             <div class="nfs">
                                <div>
-                                <img src="nfs.png">
+                                <img src="{% static 'images/nfs.png' %}">
                                </div>
                        
                             <!-- <div class="carousel-caption d-none d-md-block">
@@ -332,7 +333,7 @@
                         <li>
                             <div class="farcry">
                                <div>
-                                <img src="farcry.png">
+                                <img src="{% static 'images/farcry.png' %}">
                                </div>
                            
 
@@ -351,7 +352,7 @@
                         <li>
                             <div class="assa">
                                 <div>
-                                    <img src="assasins.png">
+                                    <img src="{% static 'images/assasins.png' %}">
                                 </div>
 
 
@@ -365,7 +366,7 @@
                         <li>
                             <div class="evil">
                                 <div>
-                                    <img src="resident evil.png">
+                                    <img src="{% static 'images/resident evil.png' %}">
                                 </div>
 
 

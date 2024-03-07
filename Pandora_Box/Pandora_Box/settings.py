@@ -68,6 +68,12 @@ TEMPLATES = [
     },
 ]
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+    ]
+
+STATIC_URL = "static/"
+
 WSGI_APPLICATION = 'Pandora_Box.wsgi.application'
 
 
