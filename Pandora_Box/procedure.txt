@@ -1,5 +1,0 @@
-myenv\Scripts\activate
-
-deactivate
-
-python manage.py runserver
