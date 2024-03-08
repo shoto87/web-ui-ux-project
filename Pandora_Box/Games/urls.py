@@ -7,8 +7,5 @@ urlpatterns = [
     path('carouseltest7', views.carouseltest7, name='carouseltest7'),
     path('community', views.community, name='community'),
     path('support', views.support, name='support'),
-
-
-
-    
+    path('base', views.base, name='base')  
 ]

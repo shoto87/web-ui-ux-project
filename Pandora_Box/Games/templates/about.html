@@ -1,46 +1,17 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css"
-        integrity="sha384-dpuaG1suU0eT09tx5plTaGMLBsfDLzUCCUXOY2j/LSvXYuG6Bqs43ALlhIqAJVRb" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="about.css">
-    <script src="community.js"></script>
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <script src="{% static 'community.js' %}"></script>
 </head>
 <style>
 </style>
 
 <body>
-    <header>
-        <div class="lg">
-            <!-- <h2><a href="https://www.fortnite.com/?lang=en-US">madMAXs</a></h2> -->
-            <h2><a href="#">pandora's<sup>box</sup></a></h2>
-        </div>
-        <nav>
-            <ul>
-                <li class="store"><a
-                        href="carouseltest7.html">STORE</a></li>
-                <li class="community"><a
-                        href="community.html">COMMUNITY</a></li>
-                <li class="about"><a href="about.html">ABOUT</a>
-                </li>
-                <li class="support"><a
-                        href="support.html">SUPPORT</a></li>
-                <li class="Download"><a href="#">install pandora's<sup>box</sup></a></li>
-            </ul>
-        </nav>
-    </header>
-    <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Developers</title>
     <style>
         body {
@@ -86,27 +57,17 @@
     <div class="container">
         <h1>About Developers</h1>
         <div class="developer">
-            <img src="developer1.jpg" alt="Developer 1">
+            <img src="{% static 'images/developer1.jpg' %}" alt="Developer 1">
             <h2>Pratik Kodape</h2>
             <p>Lead Designer</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel felis et felis placerat gravida. Duis vehicula elit at arcu aliquet convallis.</p>
         </div>
         <div class="developer">
-            <img src="developer2.jpg" alt="Developer 2">
+            <img src="{% static 'images/developer2.jpg' %}" alt="Developer 2">
             <h2>Arbaaz Shaikh</h2>
             <p>Lead Developer</p>
             <p>Nulla euismod justo at odio aliquet, vel efficitur nunc efficitur. Vestibulum et lectus tincidunt, fermentum lacus quis, lacinia dolor.</p>
         </div>
     </div>
 </body>
-</html>
-
-   
-
-
- 
-
-
-</body>
-
-</html>
+{% endblock %}

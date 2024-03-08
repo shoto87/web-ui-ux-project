@@ -1,15 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
+from .models import Product
+from math import ceil
 
 
 def index(request):
-    template = loader.get_template('carouseltest7.html')
-    return HttpResponse(template.render())
+    products = Product.objects.all()
+    n = len(products)
+    nSlides = n//4 - ceil(n/4 -n//4 )
+
+    params = {"products":products,"nSlides":nSlides,"range":range(1,nSlides)}
+    return render(request, 'carouseltest7.html',params)
 
 def about(request):
-    template = loader.get_template('about.html')
-    return HttpResponse(template.render())
+    return render(request, 'about.html')
 
 def carouseltest7(request):
     return render(request, 'carouseltest7.html')
@@ -19,3 +24,6 @@ def community(request):
 
 def support(request):
     return render(request, 'support.html')
+
+def base(request):
+    return render(request, 'base.html')

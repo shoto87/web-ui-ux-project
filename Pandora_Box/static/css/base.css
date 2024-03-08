@@ -91,9 +91,9 @@ body {
  .carousel-item{
      padding-top: 40px;
  }
- /* ul li{
+ ul li{
      display: inline-block;
- } */
+ }
  .carousel-item button{
      border: 1px solid black;
      border-radius: 50px;
@@ -230,3 +230,18 @@ body {
     background-color:white;
     transition: .4s;
 }
+.navbar .container-fluid{
+    background-color: #1a1a1a6b;
+}
+form .btn {
+    border-radius: 50px;
+}
+nav ul li:not(:last-child) a:hover,
+ nav ul li:not(:last-child) a:focus {
+     border-bottom: 2px solid white;
+ 
+ }
+ /* nav ul li #store{
+    color: grey;
+    border-bottom: 2px solid grey;
+ } */

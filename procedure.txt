@@ -9,3 +9,5 @@ git pull origin main
 src="{% static 'type_folder/fileName' %}"
 
 href="{% static 'type_folder/fileName' %}
+
+pip install pillow
