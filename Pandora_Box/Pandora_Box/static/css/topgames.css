@@ -1,0 +1,17 @@
+.hero{
+    padding-top: 60px;
+}
+.lg h2{
+    display: none;
+}
+.lg a i{
+    border: 1px solid white;
+    padding: 15px;
+    color: white;
+    border-radius: 50px;
+}
+.lg a:hover i{
+    background-color: white;
+    color: black;
+    transition: .4s;
+}

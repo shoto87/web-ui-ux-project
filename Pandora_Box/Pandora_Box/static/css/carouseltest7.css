@@ -1,0 +1,311 @@
+body {
+    background: radial-gradient(circle, #1a1a1a, #000000);
+}
+
+.lg h2 a {
+    display: block;
+    font-size: 32px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 30px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px transparent;
+    transition: .4s;
+}
+
+nav ul li:not(:last-child) a:hover,
+nav ul li:not(:last-child) a:focus {
+    border-bottom: 2px solid white;
+    transition: .4s;
+
+}
+
+nav ul li.store a {
+    border-bottom: 2px solid;
+    color: grey;
+}
+
+nav ul li.Download a {
+    background: transparent;
+    color: white;
+    border: 1px solid #f5dca8;
+    padding: 9px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 150px;
+}
+
+nav ul li.Download:hover a {
+    border: 1px solid white;
+    transition: .4s;
+    color: black;
+    background: white;
+
+}
+
+.carousel-first .carousel {
+
+    height: 500px;
+    width: 100%;
+}
+
+.fort {
+    background: radial-gradient(#f9d349, 20%, #d57e12);
+}
+
+.prince {
+    background: radial-gradient(#4f838a, 20%, #0c2444);
+}
+
+.apex {
+    background: radial-gradient(#cecece, 20%, #383838);
+}
+
+.lol {
+    background: radial-gradient(#50cf90, 50%, #133a1f);
+}
+
+img {
+    height: 400px;
+    width: auto;
+
+}
+
+.carousel-inner {
+    text-align: center;
+}
+
+.carousel-caption {
+    padding-top: 100px;
+
+}
+
+.carousel-item {
+    padding-top: 40px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+.carousel-item button {
+    border: 1px solid black;
+    border-radius: 50px;
+    background: transparent;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 400;
+
+    opacity: 80%;
+    /* filter: blur(5px);
+     -webkit-filter: blur(5px); */
+}
+
+.carousel-item:hover .prince button {
+    background: radial-gradient(#4f838a, 20%, #0c2444);
+   
+    transition: .5s;
+    color: white;
+}
+
+.carousel-item:hover .apex button {
+    background: radial-gradient(#cecece, 20%, #383838);
+    
+    transition: .5s;
+    color: white;
+}
+
+.carousel-item:hover .lol button {
+    background: radial-gradient(#50cf90, 50%, #133a1f);
+ 
+    transition: .5s;
+    color: white;
+}
+
+.carousel-item:hover .fort button {
+    background: radial-gradient(#f9d349, 20%, #d57e12);
+
+    transition: .5s;
+    color: white;
+}
+
+
+.carousel-item .carousel-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.carousel-item .carousel-content .btn {
+    margin-top: 10px;
+}
+
+.poster {
+    text-align: center;
+}
+
+.menu-bar {
+    text-align: center;
+    border: 1px solid rgb(5, 68, 68);
+    padding: 5px;
+    padding-top: 10px;
+    font-size: 20px
+}
+
+.menu-bar nav ul .search input {
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.game-box {
+    border: 1px solid black;
+}
+
+.carousel-second .carousel {
+    height: 500px;
+    width: auto;
+}
+
+.carousel-second img {
+    height: 250px;
+    width: auto;
+
+}
+
+.carousel-third .carousel {
+    height: 500px;
+    width: auto;
+  
+}
+
+.carousel-third img {
+    height: 250px;
+    width: auto;
+
+}
+
+.carousel-second .carousel-item button {
+    border: 1px solid black;
+    border-radius: 50px;
+    background: transparent;
+    padding: 10px;
+    font-size: 10px;
+    font-weight: 400;
+
+    opacity: 80%;
+    /* filter: blur(5px);
+    -webkit-filter: blur(5px); */
+}
+
+.carousel-third .carousel-item button {
+    border: 1px solid black;
+    border-radius: 50px;
+    background: transparent;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: 400;
+    position: relative;
+    opacity: 80%;
+    /* filter: blur(5px);
+    -webkit-filter: blur(5px); */
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.game-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.game-buttons li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.carousel-second .carousel-inner .carousel-item ul li div:hover img {
+    transform: scale(1.2);
+    transition: .4s;
+    cursor: pointer;
+}
+
+.carousel-second .carousel-inner .carousel-item ul li:hover button {
+    background-color: white;
+    transition: .4s;
+}
+
+.navbar .container-fluid {
+    background-color: #1a1a1a6b;
+}
+
+form .btn {
+    border-radius: 50px;
+}
+
+.navbar ul li:not(:last-child) a:hover,
+.navbar ul li:not(:last-child) a:focus {
+    /* border-bottom: 1px solid white; */
+  color: grey;
+    transition: .4s ;
+    border: 1px solid green;
+    border-radius: 50px;
+
+}
+
+/* nav ul li #store{
+    color: grey;
+    border-bottom: 2px solid grey;
+ } */
+ #navbar2 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+
+}
+.carousel-first{
+    padding-top: 40px;
+}
+.navbar{
+    padding: 10px 0;
+    z-index: 1000; /* Ensure the sticky div is on top */
+}
+.navbar-nav a .btn-sm i{
+    padding: 5px;
+}
+.carousel-item h3{
+    font-size: 100px;
+    line-height: 1;
+    color: white;
+    margin: 0px 0px 45px;
+    font-family: 'Permanent Marker', cursive;
+}

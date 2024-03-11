@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .form-container.signup-mode {
+            transform: translateX(-100%);
+        }
+
+        .form-container.hiding-mode {
+            display: none;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            /* width: calc(100% - 40px); */
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .form-container .switch-mode {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .form-container .switch-mode a {
+            color: #007bff;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .form-container .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+            <div class="error-message"></div>
+        </form>
+        <div class="switch-mode">
+            Don't have an account? <a onclick="toggleFormMode()">Sign Up</a>
+        </div>
+    </div>
+    <div class="form-container signup-mode hiding-mode">
+        <h2>Sign Up</h2>
+        <form action="signup.php" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Sign Up">
+            <div class="error-message"></div>
+        </form>
+        <div class="switch-mode">
+            Already have an account? <a onclick="toggleFormMode()">Login</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleFormMode() {
+            const formContainers = document.querySelectorAll('.form-container');
+            formContainers.forEach(container => container.classList.toggle('signup-mode'));
+            formContainers.forEach(container => container.classList.toggle('hiding-mode'));
+        }
+    </script>
+</body>
+</html>

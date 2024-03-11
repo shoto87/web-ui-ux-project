@@ -1,0 +1,66 @@
+body {
+    background: radial-gradient(circle, #1a1a1a, #000000);
+}
+
+ .lg h2 a{
+     display: block;
+     font-size: 32px;
+     font-weight: 600;
+     text-decoration: none;
+     color: white;
+ }
+ header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 40px 0 30px;
+ }
+ nav ul li {
+     list-style: none;
+     display: inline-block;
+ }
+ 
+ nav ul li a {
+     text-decoration: none;
+     color: white;
+     margin-left: 60px;
+     font-size: 15px;
+     font-weight: 600;
+     border-bottom: 2px transparent;
+     transition: .4s;
+ }
+ 
+ nav ul li:not(:last-child) a:hover,
+ nav ul li:not(:last-child) a:focus {
+     border-bottom: 2px solid white;
+ 
+ }
+ 
+ nav ul li.community a {
+     border-bottom: 2px solid;
+     color: grey;
+ }
+ 
+ nav ul li.Download a {
+     background: transparent;
+     color: white;
+     border: 1px solid #f5dca8;
+     padding: 9px 20px;
+     border-radius: 30px;
+     font-size: 14px;
+     font-weight: 500;
+     margin-left: 150px;
+ }
+ 
+ nav ul li.Download:hover a {
+     border: 1px solid white;
+     transition: .4s;
+     color: black;
+     background: white;
+ 
+ }
+ 
+ .screenshot img{
+    padding: 20px;
+    border: 1px solid green;
+ }

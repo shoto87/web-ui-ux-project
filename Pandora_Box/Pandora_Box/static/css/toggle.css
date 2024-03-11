@@ -1,0 +1,16 @@
+
+ul li{
+        
+    display: inline-block;
+}
+/* Initially hide the dropdown menu */
+.dropdown-menu {
+display: none;
+}
+
+/* Show the dropdown menu when hovering over the dropdown or its options */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+display: block;
+transition: 2s;
+}

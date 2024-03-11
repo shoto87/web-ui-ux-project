@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    {% block title %} <title>Community</title>{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'css/community.css' %}">
+
+</head>
+
+
+
+<body>
+    <div class="container">
+        <h1>Community</h1>
+        <div class="social-media">
+            <a href="https://www.facebook.com">Facebook</a>
+            <a href="https://twitter.com">Twitter</a>
+            <a href="https://www.instagram.com">Instagram</a>
+            <!-- Add more social media links as needed -->
+        </div>
+        <div class="details">
+            <h2>About Our Community</h2>
+            <p>Welcome to our vibrant gaming community! Here, you'll find passionate gamers from around the world
+                sharing their experiences, tips, and tricks. Whether you're a casual player or a hardcore gamer, our
+                community has something for everyone.</p>
+            <p>Connect with fellow gamers, join discussions, and stay updated on the latest news and events in the
+                gaming world. Don't forget to follow us on social media to stay connected!</p>
+        </div>
+        <div class="screenshot">
+            <h2>Xbox Games Screenshots</h2>
+            <img src="{% static 'images/screenshots/Asphalt 9_ Legends 01_11_2018 6_26_58 PM (2).png' %}" alt="Screenshot 1">
+            <img src="{% static 'images/screenshots/Dead Rivals - Zombie MMO 12_12_2018 7_24_37 PM.png' %}" alt="Screenshot 1">
+            <img src="{% static 'images/screenshots/Modern Combat Versus 19_10_2018 6_50_51 PM.png' %}" alt="Screenshot 1">
+            <img src="{% static 'images/screenshots/Dead Rivals - Zombie MMO 12_12_2018 7_44_18 PM.png' %}" alt="Screenshot 1">
+            <img src="{% static 'images/screenshots/Modern Combat Versus 11_12_2018 5_43_15 PM.png' %}" alt="Screenshot 1">
+            <video autoplay muted loop id="myVideo">
+                <source src="{% static '#' %}" type="video/mp4">
+            </video>
+            <!-- Add more screenshots as needed -->
+        </div>
+    </div>
+</body>
+{% endblock %}
