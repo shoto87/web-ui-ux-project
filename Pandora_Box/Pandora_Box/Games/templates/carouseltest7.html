@@ -83,7 +83,7 @@
                             <p>Fortnite is an online video game and game platform developed by Epic Games and released
                                 in 2017. It is available in six distinct game mode versions that otherwise share the
                                 same general gameplay and game engine:</p>
-                                <a class="wish" href="#"><i class="fa-regular fa-heart"></i> add to wishlist</a>
+                                <a class="wish" href="#" ><i class="fa-solid fa-heart" onclick="change(this)" ></i> add to wishlist</a>
                             <!-- <a href="{% url 'fort' %}"><button onclick="fort()">download <i
                                         class="fa-solid fa-download"></i></button></a> -->
                                         <a class="download" href="{% url 'fort' %}"><i class="fa-solid fa-download"></i>download</a>
@@ -98,7 +98,7 @@
                             <h3>Apex Legends</h3>
                             <p>Apex Legends is a free-to-play battle royale-hero shooter game developed by Respawn
                                 Entertainment and published by Electronic Arts.</p>
-                                <a class="wish" href="#"><i class="fa-regular fa-heart"></i> add to wishlist</a>
+                                <a class="wish" href="#" ><i class="fa-solid fa-heart" onclick="change(this)"></i> add to wishlist</a>
                                 <a class="download" href="{% url 'apex' %}"><i class="fa-solid fa-download"></i>download</a>
                                 <!-- <a href="{% url 'apex' %}"><button onclick="apex()">download <i
                                     class="fa-solid fa-download"></i></button></a> -->
@@ -116,7 +116,7 @@
                             <h3>League Of Legends</h3>
                             <p>Dash into a stylish and thrilling action-adventure platformer game set in a mythological
                                 Persian world where the boundaries of time and space are yours to manipulate.</p>
-                                <a class="wish" href="#"><i class="fa-regular fa-heart"></i> add to wishlist</a>
+                                <a class="wish" href="#" ><i class="fa-solid fa-heart" onclick="change(this)"></i> add to wishlist</a>
                                 <a class="download" href="{% url 'lol' %}"><i class="fa-solid fa-download"></i>download</a>
                                 <!-- <a href="{% url 'lol' %}"> <button onclick="lol()">download <i
                                     class="fa-solid fa-download"></i></button></a> -->
@@ -132,7 +132,7 @@
                             <h3>Prince Of Persia</h3>
                             <p>Dash into a stylish and thrilling action-adventure platformer game set in a mythological
                                 Persian world where the boundaries of time and space are yours to manipulate.</p>
-                                <a class="wish" href="#"><i class="fa-regular fa-heart"></i> add to wishlist</a>
+                                <a class="wish" href="#" ><i class="fa-solid fa-heart" onclick="change(this)"></i> add to wishlist</a>
                                 <a class="download" href="{% url 'prince' %}"><i class="fa-solid fa-download"></i>download</a>
                                 <!-- <a href="{% url 'prince' %}"><button onclick="prince()">download <i
                                     class="fa-solid fa-download"></i></button> -->
@@ -398,7 +398,17 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
 
+<script>
+    function change(element){
+       var current= element.style.color;
 
+       if(current==='black')
+       element.style.color='red';
+
+       else
+       element.style.color='black';
+    }
+</script>
 </body>
 
 {% endblock %}
