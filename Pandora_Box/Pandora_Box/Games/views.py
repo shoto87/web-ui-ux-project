@@ -42,3 +42,6 @@ def prince(request):
 
 def lol(request):
     return render(request,'lol.html')
+
+def signup(request):
+    return render(request,'loginpage.html')

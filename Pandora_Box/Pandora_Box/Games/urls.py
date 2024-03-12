@@ -12,5 +12,6 @@ urlpatterns = [
     path('fort', views.fort, name='fort'),
     path('apex', views.apex,name='apex'),
     path('lol', views.lol,name='lol'),
-    path('prince', views.prince,name='prince')  
+    path('prince', views.prince,name='prince'),
+    path('signup',views.signup,name='signup') 
 ]
