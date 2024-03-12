@@ -3,15 +3,30 @@ from django.http import HttpResponse
 from django.template import loader
 from .models import Product
 from math import ceil
+from .forms import SignUpForm
 
 
 def index(request):
     products = Product.objects.all()
     n = len(products)
     nSlides = n//4 - ceil(n/4 -n//4 )
-
     params = {"products":products,"nSlides":nSlides,"range":range(1,nSlides)}
     return render(request, 'carouseltest7.html',params)
+
+def login(request):
+    return render(request, 'login.html')
+
+def user_signup(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+        return render(request, 'login.html')
+    else:
+        return render(request, 'loginpage.html', {'form':form})
+
+def signup(request):
+    return render(request,'loginpage.html')
 
 def about(request):
     return render(request, 'about.html')
@@ -28,9 +43,6 @@ def support(request):
 def base(request):
     return render(request, 'base.html')
 
-def login(request):
-    return render(request, 'login.html')
-
 def fort(request):
     return render(request,'fort.html')    
 
@@ -43,5 +55,3 @@ def prince(request):
 def lol(request):
     return render(request,'lol.html')
 
-def signup(request):
-    return render(request,'loginpage.html')
