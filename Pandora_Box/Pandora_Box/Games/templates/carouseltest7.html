@@ -24,39 +24,114 @@
         margin: 0px 0px 45px;
         font-family: 'Permanent Marker', cursive;
     }
-    .carousel-caption .wish{
+
+    .carousel-caption .wish {
         border: 1px solid black;
         padding: 10px;
         border-radius: 50px;
         text-decoration: none;
         color: black;
-        
+
     }
-    .carousel-caption .download{
+
+    .carousel-caption .download {
         border: 1px solid black;
         padding: 10px;
         border-radius: 50px;
         text-decoration: none;
         color: black;
     }
-    .carousel-caption:hover .wish{
+
+    .carousel-caption:hover .wish {
         background-color: rgba(255, 255, 255, 0.226);
         color: black;
         transition: .4s;
     }
-    .carousel-caption:hover .wish{
-        
 
-    }
-    .carousel-caption:hover .download{
+    .carousel-caption:hover .wish {}
+
+    .carousel-caption:hover .download {
         background-color: rgba(255, 255, 255, 0.226);
-        color:black;
+        color: black;
         transition: .4s;
     }
 
-    .carousel-item a:hover button{
+    .carousel-item a:hover button {
         transition: none;
     }
+
+    section div {
+        padding-top: 100px;
+    }
+
+    .sections div ul {
+        text-align: center;
+
+    }
+
+    .sections div ul li div{
+        height: 400px;
+        width: auto;
+        padding: 5px;
+        /* background-color: rgba(0, 0, 0, 0.425); */
+    }
+
+    .sections div ul li:hover img {
+        transform: scale(1.2);
+        transition: .4s;
+    }
+
+    .carousel-item {
+        max-width: 100%;
+    }
+    .image-text{
+        display: inline-block;
+        position:relative ;
+    }
+    .image-text .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; 
+    background-color: #198754;
+    padding: 60px;
+    opacity: 1; 
+    transition: opacity 0.3s ease;
+    border: 1px solid #198754;
+    }
+    .image-text:hover .text,
+.image-text:active .text {
+    opacity: 0;
+}
+ 
+.image-text .text2 a{
+        position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:#198754;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center; 
+    /* background-color: rgba(255, 255, 255, 0.815); */
+    padding: 60px;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    border:2px solid #198754;
+    border-radius: 50px;
+    padding: 10px;
+    }
+    
+   
+
+.image-text:hover .text2 a,
+.image-text:active .text2 a{
+    opacity: 1;
+}
 </style>
 
 <body>
@@ -83,10 +158,11 @@
                             <p>Fortnite is an online video game and game platform developed by Epic Games and released
                                 in 2017. It is available in six distinct game mode versions that otherwise share the
                                 same general gameplay and game engine:</p>
-                                <a class="wish" href="#" ><i class="fa-solid fa-heart" onclick="change(this)" ></i> add to wishlist</a>
+                            <a class="wish" href="#"><i class="fa-solid fa-heart" onclick="change(this)"></i> add to
+                                wishlist</a>
                             <!-- <a href="{% url 'fort' %}"><button onclick="fort()">download <i
                                         class="fa-solid fa-download"></i></button></a> -->
-                                        <a class="download" href="{% url 'fort' %}"><i class="fa-solid fa-download"></i>download</a>
+                            <a class="download" href="{% url 'fort' %}"><i class="fa-solid fa-download"></i>download</a>
                         </div>
                     </div>
                 </div>
@@ -98,9 +174,10 @@
                             <h3>Apex Legends</h3>
                             <p>Apex Legends is a free-to-play battle royale-hero shooter game developed by Respawn
                                 Entertainment and published by Electronic Arts.</p>
-                                <a class="wish" href="#" ><i class="fa-solid fa-heart" onclick="change(this)"></i> add to wishlist</a>
-                                <a class="download" href="{% url 'apex' %}"><i class="fa-solid fa-download"></i>download</a>
-                                <!-- <a href="{% url 'apex' %}"><button onclick="apex()">download <i
+                            <a class="wish" href="#"><i class="fa-solid fa-heart" onclick="change(this)"></i> add to
+                                wishlist</a>
+                            <a class="download" href="{% url 'apex' %}"><i class="fa-solid fa-download"></i>download</a>
+                            <!-- <a href="{% url 'apex' %}"><button onclick="apex()">download <i
                                     class="fa-solid fa-download"></i></button></a> -->
                             <!-- <a href="{% url 'apex' %}"><button onclick="apex()">wishlist<i
                                             class="fa-solid fa-download"></i></button></a> -->
@@ -116,9 +193,10 @@
                             <h3>League Of Legends</h3>
                             <p>Dash into a stylish and thrilling action-adventure platformer game set in a mythological
                                 Persian world where the boundaries of time and space are yours to manipulate.</p>
-                                <a class="wish" href="#" ><i class="fa-solid fa-heart" onclick="change(this)"></i> add to wishlist</a>
-                                <a class="download" href="{% url 'lol' %}"><i class="fa-solid fa-download"></i>download</a>
-                                <!-- <a href="{% url 'lol' %}"> <button onclick="lol()">download <i
+                            <a class="wish" href="#"><i class="fa-solid fa-heart" onclick="change(this)"></i> add to
+                                wishlist</a>
+                            <a class="download" href="{% url 'lol' %}"><i class="fa-solid fa-download"></i>download</a>
+                            <!-- <a href="{% url 'lol' %}"> <button onclick="lol()">download <i
                                     class="fa-solid fa-download"></i></button></a> -->
                         </div>
                     </div>
@@ -132,9 +210,11 @@
                             <h3>Prince Of Persia</h3>
                             <p>Dash into a stylish and thrilling action-adventure platformer game set in a mythological
                                 Persian world where the boundaries of time and space are yours to manipulate.</p>
-                                <a class="wish" href="#" ><i class="fa-solid fa-heart" onclick="change(this)"></i> add to wishlist</a>
-                                <a class="download" href="{% url 'prince' %}"><i class="fa-solid fa-download"></i>download</a>
-                                <!-- <a href="{% url 'prince' %}"><button onclick="prince()">download <i
+                            <a class="wish" href="#"><i class="fa-solid fa-heart" onclick="change(this)"></i> add to
+                                wishlist</a>
+                            <a class="download" href="{% url 'prince' %}"><i
+                                    class="fa-solid fa-download"></i>download</a>
+                            <!-- <a href="{% url 'prince' %}"><button onclick="prince()">download <i
                                     class="fa-solid fa-download"></i></button> -->
                             </a>
                         </div>
@@ -386,7 +466,81 @@
         </div>
     </div>
 
+    <div class="sections">
+        <section id="section1">
+            <div class="img1">
+                <ul>
+                    <li>
+                        <div class="image-text">
+                            <img src="{% static 'images/punisher.png' %}" alt="">
+                            <div class="text">Get this game now</div>
+                            <div class="text2"><a href="#"><i class="fa-solid fa-download"></i> download</a></div>
 
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="image-text">
+                            <img src="{% static 'images/justcause.jpg' %}" alt="">
+                            <div class="text">Get this game now</div>
+                            <div class="text2"><a href="#"><i class="fa-solid fa-download"></i> download</a></div>
+
+
+
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <div class="image-text">
+                            <img src="{% static 'images/deadrising.jpg' %}" alt="">
+                            <div class="text">Get this game now</div>
+                            <div class="text2"><a href="#"><i class="fa-solid fa-download"></i> download</a></div>
+
+                        </div>
+                    </li>
+                    </li>
+
+
+                </ul>
+            </div>
+        </section>
+        <section id="section2">
+            <div class="img2"><img src="{% static 'images/seelpingdogs.jpeg' %}" alt="">
+                <img src="{% static 'images/assasins.png' %}" alt="">
+                <!-- <img src="{% static 'images/assasins.png' %}" alt=""> -->
+            </div>
+        </section>
+        <section id="section3">
+            <div class="img3"><img src="{% static 'images/reddead.jpg' %}" alt="">
+                <img src="{% static 'images/assasins.png' %}" alt="">
+                <!-- <img src="{% static 'images/assasins.png' %}" alt=""> -->
+            </div>
+        </section>
+        <section id="section4">
+            <div class="img4"><img src="{% static 'images/assasins.png' %}" alt="">
+                <img src="{% static 'images/assasins.png' %}" alt="">
+                <!-- <img src="{% static 'images/assasins.png' %}" alt=""> -->
+            </div>
+        </section>
+        <section id="section5">
+            <div class="img5"><img src="{% static 'images/assasins.png' %}" alt="">
+                <img src="{% static 'images/assasins.png' %}" alt="">
+                <!-- <img src="{% static 'images/assasins.png' %}" alt=""> -->
+            </div>
+        </section>
+        <section id="section6">
+            <div class="img6"><img src="{% static 'images/assasins.png' %}" alt="">
+                <img src="{% static 'images/assasins.png' %}" alt="">
+                <!-- <img src="{% static 'images/assasins.png' %}" alt=""> -->
+            </div>
+        </section>
+        <section id="section7">
+            <div class="img7">
+            </div>
+        </section>
+
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -398,17 +552,17 @@
         integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
 
-<script>
-    function change(element){
-       var current= element.style.color;
+    <script>
+        function change(element) {
+            var current = element.style.color;
 
-       if(current==='black')
-       element.style.color='red';
+            if (current === 'black')
+                element.style.color = 'red';
 
-       else
-       element.style.color='black';
-    }
-</script>
+            else
+                element.style.color = 'black';
+        }
+    </script>
 </body>
 
 {% endblock %}
