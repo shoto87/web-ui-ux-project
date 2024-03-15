@@ -1,0 +1,187 @@
+.carousel-item h3 {
+    font-size: 60px;
+    line-height: 1;
+    color: white;
+    margin: 0px 0px 45px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.carousel-caption .wish {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.carousel-caption .download {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.carousel-caption:hover .wish {
+    background-color: rgba(255, 255, 255, 0.226);
+    color: black;
+    transition: .4s;
+}
+
+.carousel-caption:hover .wish {}
+
+.carousel-caption:hover .download {
+    background-color: rgba(255, 255, 255, 0.226);
+    color: black;
+    transition: .4s;
+}
+
+.carousel-item a:hover button {
+    transition: none;
+}
+
+section div {
+    padding-top: 100px;
+}
+
+.sections div ul {
+    text-align: center;
+
+}
+
+.sections div ul li div{
+    height: 400px;
+    width: auto;
+    padding: 5px;
+    /* background-color: rgba(0, 0, 0, 0.425); */
+}
+
+.sections div ul li:hover img {
+    transform: scale(1.2);
+    transition: .4s;
+}
+
+.carousel-item {
+    max-width: 100%;
+}
+.image-text{
+    display: inline-block;
+    position:relative ;
+}
+.image-text .text{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+color: rgb(0, 0, 0);
+font-size: 20px;
+font-weight: bold;
+text-align: center; 
+background: radial-gradient(#198754 , black);
+padding: 60px;
+opacity: 1; 
+transition: opacity 0.3s ease;
+border: 1px solid #198754;
+}
+.image-text:hover .text,
+.image-text:active .text {
+opacity: 0;
+}
+
+.image-text .text2 a{
+    position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+color:#198754;
+font-size: 20px;
+font-weight: bold;
+text-align: center; 
+/* background-color: rgba(255, 255, 255, 0.815); */
+padding: 60px;
+opacity: 0; 
+transition: opacity 0.3s ease;
+border:2px solid #198754;
+background: radial-gradient(#198754 , black);
+text-decoration: none;
+border-radius: 50px;
+padding: 10px;
+}
+
+
+
+.image-text:hover .text2 a,
+.image-text:active .text2 a{
+opacity: 1;
+}
+
+.container{
+    background:radial-gradient(#333,black);
+
+}
+.nav2{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 13%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+    /* border-radius: 50px; */
+    background:radial-gradient(#333,black);
+    display:flex;
+}
+.nav2 nav ul li a{
+    text-align: center;
+}
+
+.nav2 nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px transparent;
+    transition: .4s;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+/* .nav2 nav ul li:not(:last-child) a:hover,
+.nav2 nav ul li:not(:last-child) a:focus {
+    border-bottom: 2px solid white;
+
+} */
+nav ul .store{
+    border-bottom: 2px white solid;
+}
+nav ul li:not(:last-child) a {
+    position: relative;
+}
+
+nav ul li:not(:last-child) a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li:not(:last-child) a:hover:after,
+nav ul li:not(:last-child) a:focus:after {
+    background-color: white; /* On hover/focus, change to white */
+}
+ 
+
+
+.container{
+    /* padding-top: 50px; */
+    
+}

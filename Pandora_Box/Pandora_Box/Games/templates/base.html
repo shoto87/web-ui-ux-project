@@ -24,6 +24,8 @@
     <script src="{% static 'js/carouseltest6.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/toggle.css' %}">
     <link rel="stylesheet" href="{%static 'css/base.css'%}">
+    <link rel="stylesheet" href="{%static 'css\base_footer.css' %}">
+
     
     {% block title %}
     {% endblock %}
@@ -108,5 +110,35 @@
 
 {% block content %}
 {% endblock %}
+<footer>
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <a class="logo" href="{% url 'index' %}"><sub>"</sub>Pandora<sup>BOX<sup>"</sup></sup></a>
+    
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Games</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-discord"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2024 Pandora Box. All Rights Reserved.</p>
+            <p>Terms of Service | Privacy Policy</p>
+        </div>
+    </div>
+        </footer>
 
 </html>
