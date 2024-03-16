@@ -18,13 +18,11 @@ body {
     transition: transform 0.3s ease;
 }
 
-.form-container.signup-mode {
-    transform: translateX(-100%);
-}
 
-.form-container.hiding-mode {
+
+/* .form-container.hiding-mode {
     display: none;
-}
+} */
 
 .form-container h2 {
     text-align: center;
@@ -63,10 +61,10 @@ body {
     text-align: center;
 }
 
-.form-container .switch-mode a {
+/* .form-container .switch-mode a {
 color:#198754;    text-decoration: none;
     cursor: pointer;
-}
+} */
 
 .form-container .error-message {
     color: red;

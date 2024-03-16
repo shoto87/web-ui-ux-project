@@ -1,0 +1,133 @@
+.carousel-item h3 {
+    font-size: 60px;
+    line-height: 1;
+    color: white;
+    margin: 0px 0px 45px;
+    font-family: 'Permanent Marker', cursive;
+} 
+
+.carousel-caption .wish {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.carousel-caption .download {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+} 
+.carousel-caption:hover .wish {
+    background-color: rgba(255, 255, 255, 0.226);
+    color: black;
+    transition: .4s;
+} 
+
+
+
+.carousel-caption:hover .download {
+    background-color: rgba(255, 255, 255, 0.226);
+    color: black;
+    transition: .4s;
+}
+
+section div {
+    padding-top: 60px;
+} 
+
+.sections div ul {
+    text-align: center;
+
+}
+
+.sections div ul li div img{
+   
+   padding: 5px;
+
+}
+
+.sections div ul li:hover img {
+    transform: scale(1.05);
+    transition: .4s;
+   
+
+}
+
+.image-text {
+    display: inline-block;
+    position: relative;
+    
+    
+}
+
+.image-text .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight:lighter;
+    text-align: center;
+    background: radial-gradient(#198754b7, rgba(0, 0, 0, 0.623));
+    background-size: cover;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    border: 1px solid #198754;
+}
+
+.image-text:hover .text,
+.image-text:active .text {
+    opacity: 0;
+}
+
+.image-text .text2 a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #198754;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 60px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border: 2px solid #198754;
+    background: radial-gradient(#198754, black);
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.image-text:hover .text2 a,
+.image-text:active .text2 a {
+    opacity: 1;
+}
+
+
+.nav2 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 13%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    z-index: 2000;
+
+}
+.carousel-first{
+    padding-top: 40px;
+}
+.navbar{
+    padding: 10px 0;
+    z-index: 1000; /* Ensure the sticky div is on top */
+}
+.navbar-nav a .btn-sm i{
+    padding: 5px;
+}

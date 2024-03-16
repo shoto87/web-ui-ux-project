@@ -4,11 +4,8 @@
 {% block content %}
 
 <head>
-    <style>
-    </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   
+    {% block title %} <title>Sign in</title>{% endblock %}
     <link rel="stylesheet" href="{% static 'css/login2.css' %}">
     <!-- <script src="{% static 'js/login2.js' %}"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -27,23 +24,12 @@
             <a class="fg" href="#">forgot password ?</a>
         </form>
         <div class="switch-mode">
-         already have an account<a href="{% url 'login' %}" onclick="toggleFormMode()">log in</a>
+         already have an account<a href="{% url 'login' %}">log in</a>
         </div>
 
     </div>
-    <!-- <div class="form-container signup-mode hiding-mode">
-        <h2> <i class="fa-solid fa-user-astronaut"></i> Sign Up</h2>
-        <form action="signup.php" method="post">
-           <input type="email" name="username" placeholder="email id..." required>
-            <input type="password" name="password" placeholder="password..." required>
-            <input type="submit" value="Sign Up">
-            <div class="error-message"></div>
-        </form>
-        <div class="switch-mode">
-            Already have an account? <a onclick="toggleFormMode()">Login</a>
-        </div>
-    </div> -->
-
+   
+  
 
 </body>
 {% endblock %}

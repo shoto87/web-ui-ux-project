@@ -289,7 +289,7 @@ form .btn {
     background-color: #333;
     color: white;
     padding: 10px 0;
-    z-index: 1000;
+    z-index: 2000;
 
 }
 .carousel-first{

@@ -4,11 +4,10 @@
 {% block content %}
 
 <head>
-    <style>
-    </style>
+   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    {% block title %} <title>Log in</title>{% endblock %}
     <link rel="stylesheet" href="{% static 'css/login2.css' %}">
     <script src="{% static 'js/login2.js' %}"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -28,7 +27,7 @@
             <a class="fg" href="#">forgot password ?</a>
         </form>
         <div class="switch-mode">
-            Don't have an account? <a href="{% url 'signup'%}" onclick="toggleFormMode()">Sign Up</a>
+            Don't have an account? <a href="{% url 'signup'%}" >Sign Up</a>
         </div>
 
     </div>
