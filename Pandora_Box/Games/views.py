@@ -14,9 +14,10 @@ def index(request):
     return render(request, 'carouseltest7.html',params)
 
 def login(request):
-    return render(request, 'login.html')
+    return render(request, 'carouseltest7.html')
 
-def user_signup(request):
+def signup(request):
+    form = SignUpForm()
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
@@ -25,8 +26,6 @@ def user_signup(request):
     else:
         return render(request, 'loginpage.html', {'form':form})
 
-def signup(request):
-    return render(request,'loginpage.html')
 
 def about(request):
     return render(request, 'about.html')
