@@ -11,3 +11,4 @@ src="{% static 'type_folder/fileName' %}"
 href="{% static 'type_folder/fileName' %}
 
 pip install pillow
+https://github.com/ABZ187/Pandora_Box.git
