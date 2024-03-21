@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Community Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .game-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        video{
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<section>
+    <h2>Welcome to Our Gaming Community!</h2>
+    <div class="grid-container">
+        <div class="game-card">
+            <h3>Modern Combat</h3>
+            <img src="game-screenshot.jpg" alt="Game Screenshot">
+            <p>  <video autoplay muted loop id="myVideo">
+                <source src="C:\Users\HP\vs code\HTML\web ui ux project\Pandora_Box\Pandora_Box\static\video\modern_combat.mp4" type="video/mp4">
+            </video></p>
+        </div>
+        <div class="game-card">
+            <h3>Game Title</h3>
+            <img src="game-screenshot.jpg" alt="Game Screenshot">
+            <p>Description of the game or gameplay footage.</p>
+        </div>
+        <!-- Add more game cards as needed -->
+    </div>
+</section>
+
+<footer>
+    <p>Connect With Us:</p>
+    <!-- Add social media icons/links -->
+</footer>
+
+</body>
+</html>

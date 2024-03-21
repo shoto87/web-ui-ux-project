@@ -5,7 +5,7 @@
 
 <head>
     {% block title %} <title>Community</title>{% endblock %}
-    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">/
     <link rel="stylesheet" href="{% static 'css/community.css' %}">
 
 </head>
@@ -31,6 +31,9 @@
         </div>
         <div class="screenshot">
             <h2>Xbox Games Screenshots</h2>
+            <video autoplay muted loop id="myVideo">
+                <source src="{% static 'video/modern_combat.mp4'%}" type="video/mp4">
+            </video>
             <img src="{% static 'images/screenshots/Asphalt 9_ Legends 01_11_2018 6_26_58 PM (2).png' %}" alt="Screenshot 1">
             <img src="{% static 'images/screenshots/Dead Rivals - Zombie MMO 12_12_2018 7_24_37 PM.png' %}" alt="Screenshot 1">
             <img src="{% static 'images/screenshots/Modern Combat Versus 19_10_2018 6_50_51 PM.png' %}" alt="Screenshot 1">

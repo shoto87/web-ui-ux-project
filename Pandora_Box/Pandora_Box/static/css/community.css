@@ -61,6 +61,12 @@ body {
  }
  
  .screenshot img{
+    height: auto;
+    width: 100%;
     padding: 20px;
     border: 1px solid green;
  }
+video{
+    width: 100%;
+    height: auto;
+}
