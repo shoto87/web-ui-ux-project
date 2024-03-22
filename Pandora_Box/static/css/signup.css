@@ -1,70 +1,107 @@
+.main {
 
-    .main {
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* width: 100%; */
+    /* height: 120vh; */
+    margin: 0;
+    margin-bottom: 11%;
+    margin-top: 9%;
+    color: mediumseagreen;
+}
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
-        margin: 0;
-        margin-bottom:11%;
-        margin-top: 9%;
-        color: mediumseagreen;
+.login {
+    box-sizing: border-box;
+
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 5px 5px rgba(0 0 0 0.1);
+    width: 40%;
+    max-width: 400px;
+}
+
+.login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #198653;
+}
+
+.login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #198653;
+    font-size: 20px;
+    background-color: white;
+}
+
+.login input[type="email"],
+.login input[type="password"] {}
+
+.login input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    color: #198653;
+    cursor: pointer;
+    background-color: #333;
+    font-size: 20px;
+
+}
+
+.login input[type="submit"]:hover {
+    background-color: #198653;
+    color: white;
+    transition: .4s;
+}
+
+.signin {
+    margin-top: 20px;
+    /* text-align: center; */
+}
+
+.signin a {
+    color: #198653;
+}
+
+form label {
+    color: #198653;
+    font-family:sans-serif;
+    font-weight:700;
+
+}
+form ul{
+    /* text-align: center; */
+    box-sizing: border-box;
+}
+form p span{
+    font-style: oblique;
+}
+
+form ul li{
+    font-style: oblique;
+}
+.login h2 i{
+    border: 1px solid #198653;
+    padding: 10px;
+    border-radius: 50px;
+    animation: hue-rotate 5s linear infinite;
+
+}   
+@keyframes hue-rotate {
+    0% {
+        filter: hue-rotate(0deg);
     }
-
-    .login {
-        background-color: #333;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0px 5px 5px rgba(0 0 0 0.1);
-        width: 40%;
+    100% {
+        filter: hue-rotate(360deg);
     }
-
-    .login h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 40px;
-        color: #198653;
-    }
-
-    .login input {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        align-items: center;
-        text-align: center;
-        box-sizing: border-box;
-        border-radius: 10px;
-        border: 1px solid #198653;
-        font-size: 20px;
-        background-color: white;
-    }
-
-    .login input[type="email"],
-    .login input[type="password"] {}
-
-    .login input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        border-radius: 10px;
-        color: #198653;
-        cursor: pointer;
-        background-color: #333;
-        font-size: 20px;
-
-    }
-
-    .login input[type="submit"]:hover {
-        background-color: #198653;
-        color: white;
-        transition: .4s;
-    }
-
-    .signin {
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .signin a {
-        color: #198653;
-    }
+}

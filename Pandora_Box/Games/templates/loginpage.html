@@ -7,95 +7,22 @@
 <head>
 
     {% block title %} <title>Sign in</title>{% endblock %}
-    <!-- <link rel="stylesheet" href="{% static 'css/signup.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
     <!-- <script src="{% static 'js/login2.js' %}"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
-  body{
-    width: 100%;
-    height: 100vh;
-  }
-
-    .main {
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       
-        width: 100%;
-        height: 120vh;
-        margin: 0;
-        margin-bottom:11%;
-        margin-top: 9%;
-        color: mediumseagreen;
-    }
-
-    .login {
-       
-        background-color: #333;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0px 5px 5px rgba(0 0 0 0.1);
-        width: 40%;
-    }
-
-    .login h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 40px;
-        color: #198653;
-    }
-
-    .login input {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-        align-items: center;
-        text-align: center;
-        box-sizing: border-box;
-        border-radius: 10px;
-        border: 1px solid #198653;
-        font-size: 20px;
-        background-color: white;
-    }
-
-    .login input[type="email"],
-    .login input[type="password"] {}
-
-    .login input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        border-radius: 10px;
-        color: #198653;
-        cursor: pointer;
-        background-color: #333;
-        font-size: 20px;
-
-    }
-
-    .login input[type="submit"]:hover {
-        background-color: #198653;
-        color: white;
-        transition: .4s;
-    }
-
-    .signin {
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .signin a {
-        color: #198653;
-    }
+    
+  
+   
 </style>
 
 <body>
     <div class="main">
         <div class="login">
-            <h2> <i class="fa-solid fa-user-astronaut"></i>Sign in</h2>
+            <h2> <i class="fa-solid fa-user-astronaut"></i> Sign in</h2>
             <form method="">
                 {% csrf_token %}
                 {{form.as_p}}
