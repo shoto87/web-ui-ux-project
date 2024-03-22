@@ -26,11 +26,6 @@ def signup(request):
     else:
         return render(request, 'loginpage.html', {'form':form})
 
-<<<<<<< HEAD
-def signup(request):
-    return render(request,'signup.html')
-=======
->>>>>>> 59e5efcf484b93b7f26afd46e080da32d698d5d1
 
 def about(request):
     return render(request, 'about.html')
