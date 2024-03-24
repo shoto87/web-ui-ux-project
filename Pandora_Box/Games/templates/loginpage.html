@@ -23,14 +23,14 @@
     <div class="main">
         <div class="login">
             <h2> <i class="fa-solid fa-user-astronaut"></i> Sign in</h2>
-            <form method="">
+            <form method="post">
                 {% csrf_token %}
                 {{form.as_p}}
                 <input type="submit" value="Sign up">
 
                 <a class="fg" href="#">forgot password ?</a>
             </form>
-            <div class="switch-mode">
+            <div >
                 already have an account<a href="{% url 'login' %}">log in</a>
             </div>
         </div>

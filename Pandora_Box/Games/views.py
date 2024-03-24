@@ -5,6 +5,30 @@ from .models import Product
 from math import ceil
 from .forms import SignUpForm
 
+# added here
+from django.shortcuts import render, redirect
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login as auth_login
+from .forms import ProfileForm
+
+from django.urls import reverse_lazy
+
+success_url = reverse_lazy('profile')
+
+
+def login(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            auth_login(request, user)
+            return redirect('profile')  
+    else:
+        form = AuthenticationForm()
+    return render(request, 'login.html', {'form': form})
+
+
+# till here
 
 def index(request):
     products = Product.objects.all()
@@ -13,8 +37,8 @@ def index(request):
     params = {"products":products,"nSlides":nSlides,"range":range(1,nSlides)}
     return render(request, 'carouseltest7.html',params)
 
-def login(request):
-    return render(request, 'carouseltest7.html')
+# def login(request):
+#     return render(request, 'carouseltest7.html')
 
 def signup(request):
     form = SignUpForm()
@@ -22,9 +46,11 @@ def signup(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-        return render(request, 'login.html')
+            return render(request, 'login.html')  
     else:
-        return render(request, 'loginpage.html', {'form':form})
+        return render(request, 'loginpage.html', {'form': form})
+
+
 
 
 def about(request):
@@ -54,3 +80,5 @@ def prince(request):
 def lol(request):
     return render(request,'lol.html')
 
+def profile(request):
+    return render(request,'profile.html')

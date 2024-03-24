@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+<head>
+
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        
+        .container {
+            padding-top: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .profile {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .profile img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .user-details {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .profile {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Profile</h1>
+        <div class="profile">
+            <div class="profile-image">
+                <img src="https://via.placeholder.com/250" alt="User Avatar">
+            </div>
+            <div class="user-details">
+                <h2>patrick</h2>
+                <p>Email: user@example.com</p>
+                <p>Location: City, Country</p>
+                <p>Joined: January 1, 2024</p>
+                <p>Favorite Games:</p>
+                <ul>
+                    <li>Game 1</li>
+                    <li>Game 2</li>
+                    <li>Game 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

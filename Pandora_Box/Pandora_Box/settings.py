@@ -134,3 +134,7 @@ import os
 
 MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = '/media/'
+
+#added here
+SUCCESS_URL = '/profile/'
+#till here
