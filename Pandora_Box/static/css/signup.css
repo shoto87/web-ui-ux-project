@@ -29,9 +29,11 @@
     margin-bottom: 20px;
     font-size: 40px;
     color: #198653;
+    font-family: 'Permanent Marker', cursive;
+
 }
 
-.login input {
+.login input{
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -44,8 +46,40 @@
     background-color: white;
 }
 
+/* .login .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.login input[type="checkbox"] {
+    margin-right: 10px;
+ } */
+
+ .remember-me {
+    margin-bottom: 10px;
+}
+
+.remember-me button {
+    background-color:white;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    /* color: rgb(25, 134, 83); */
+}
+
+.remember-me button.active {
+    background-color: #4CAF50; 
+}
+
+
 .login input[type="email"],
-.login input[type="password"] {}
+.login input[type="password"] {
+
+}
 
 .login input[type="submit"] {
     width: 100%;
@@ -104,4 +138,7 @@ form ul li{
     100% {
         filter: hue-rotate(360deg);
     }
+}
+.glow{
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0, 0.5);
 }

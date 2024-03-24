@@ -12,22 +12,98 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,
+            100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;
+            1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 </head>
 
+<script>
+
+    function change(element) {
+        // var current = element.style.color;
+
+        // if (current === 'white')
+        //     element.style.color = 'black';
+
+        // else
+        //     element.style.color = 'white';
+
+        var current = element.style.backgroundColor = '#198653';
+        var text = element.style.color = 'black'
+        element.classList('glow');
+
+        var checkcolor = element.style.color;
+
+        if (checkcolor === ' rgb(25, 134, 83)')
+            element.style.color = 'white';
+        else
+            element.style.color = ' rgb(25, 134, 83)';
+
+        // if (current === 'black')
+        //     element.style.color = 'white';
+        // else
+        //     element.style.color = 'black';
+
+    }
+</script>
 
 <body>
     <div class="main">
         <div class="login">
             <h2> <i class="fa-solid fa-user-astronaut"></i> Sign in</h2>
-            <form method="post" >
+            <form method="post">
                 {% csrf_token %}
-                {{form.as_p}}
+                <!-- {{form.as_p}} -->
+                <input type="hidden" name="csrfmiddlewaretoken"
+                    value="KwbBJ7CULMErgpSwxfUo319mqifAvnvFLx9E0C5TiuNSwD3tm5d25A3ZkKjNkUHY">
+                <p>
+                    <label for="id_username">
+                        <i class="fas fa-user"></i> Username:
+                    </label>
+                    {{ form.username }}
+                    <span class="helptext" id="id_username_helptext">Required. 150 characters or fewer. Letters, digits
+                        and @/./+/-/_ only.</span>
+                </p>
+
+                <p>
+                    <label for="id_email"><i class="fa-solid fa-envelope"></i> Email address:</label>
+                    {{ form.email }}
+                </p>
+
+                <p>
+                    <label for="id_password1"><i class="fa-solid fa-unlock"></i> Password:</label>
+                    {{ form.password1 }}
+                    <span class="helptext" id="id_password1_helptext">
+                        <ul>
+                            <li>Your password can’t be too similar to your other personal information.</li>
+                            <li>Your password must contain at least 8 characters.</li>
+                            <li>Your password can’t be a commonly used password.</li>
+                            <li>Your password can’t be entirely numeric.</li>
+                        </ul>
+                    </span>
+                </p>
+
+                <p>
+                    <label for="id_password2"><i class="fa-solid fa-lock"></i> Password confirmation:</label>
+                    {{ form.password2 }}
+                    <span class="helptext" id="id_password2_helptext">Enter the same password as before, for
+                        verification.</span>
+                </p>
+
                 <input type="submit" value="Sign up">
 
-                <a class="fg" href="#">forgot password ?</a>
+                <div class="remember-me">
+                    <button id="remember_me_btn" type="button" onclick="change(this)" required>Remember Me</button>
+                </div>
             </form>
-            <div >
-                already have an account<a href="{% url 'login' %}">log in</a>
+            <div>
+                already have an account ? <a href="{% url 'login' %}">log in</a>
             </div>
         </div>
     </div>
@@ -35,4 +111,5 @@
 
 
 </body>
+
 {% endblock %}
