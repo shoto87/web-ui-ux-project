@@ -41,7 +41,7 @@
                         <li class="reviews"><a href="#">reviews</a></li>
                         <li class="chat"><a href="#">FAQ</a></li>
                         <li><a href="#">Chat</a></li>
-                        <li class="Download"><a href="{%static 'files/Fortnite.7z'%}">Download</a></li>
+                        <li class="Download"><a href="{% url static 'files/Fortnite.7z'%}">Download</a></li>
                     </ul>
                 </nav>
             </header>
@@ -71,7 +71,10 @@
             </div>
         </div>
     </section>
-
+<!-- reviews -->
+<form method = "POST">
+    <input type="text">Reviews</input>
+</form>
 </body>
 
 </html>

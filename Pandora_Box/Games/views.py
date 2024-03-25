@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 from django.template import loader
-from .models import Product
+from .models import Product, Downloads, Reviews
 from math import ceil
 from .forms import SignUpForm
+
 
 # added here
 from django.shortcuts import render, redirect
@@ -32,25 +34,35 @@ def login(request):
 
 def index(request):
     products = Product.objects.all()
-    n = len(products)
-    nSlides = n//4 - ceil(n/4 -n//4 )
-    params = {"products":products,"nSlides":nSlides,"range":range(1,nSlides)}
-    return render(request, 'carouseltest7.html',params)
+    print(request.GET)
+    return render(request, 'carouseltest7.html')
 
-# def login(request):
-#     return render(request, 'carouseltest7.html')
 
 def signup(request):
-    form = SignUpForm()
     if request.method == 'POST':
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('login')  
+            return redirect('login') 
     else:
-        return render(request, 'loginpage.html', {'form': form})
+        form = SignUpForm()
+    return render(request, 'loginpage.html', {'form': form})
+
+@login_required
+def profile(request):
+    return render(request,'profile.html')
 
 
+def fort(request):
+    download = 'login'
+    game = Product.objects.get(product_name = 'Fort')
+    print(game.product_desc)
+    if request.user.is_authenticated:
+        download = game.product_img
+        print("allow download")
+        print("allow add reviews")
+    params = {"download":download}
+    return render(request,'fort.html',params)  
 
 
 def about(request):
@@ -68,8 +80,7 @@ def support(request):
 def base(request):
     return render(request, 'base.html')
 
-def fort(request):
-    return render(request,'fort.html')    
+  
 
 def apex(request):
      return render(request,'apex.html')
@@ -80,5 +91,3 @@ def prince(request):
 def lol(request):
     return render(request,'lol.html')
 
-def profile(request):
-    return render(request,'profile.html')

@@ -14,17 +14,11 @@ urlpatterns = [
     path('community', views.community, name='community'),
     path('support', views.support, name='support'),
     path('base', views.base, name='base'),
-    # path('login', views.login, name='login'),
+    path('login', views.login, name='login'),
     path('fort', views.fort, name='fort'),
     path('apex', views.apex,name='apex'),
     path('lol', views.lol,name='lol'),
     path('prince', views.prince,name='prince'),
     path('signup',views.signup,name='signup'),
-
-        # added here
-        path('login/', login, name='login'),
-            path('profile/', views.profile, name='profile')
-
-        #till here
-
+    path('profile/', views.profile, name='profile'),
 ]

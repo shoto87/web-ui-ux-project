@@ -57,11 +57,15 @@
     <div class="main">
         <div class="login">
             <h2> <i class="fa-solid fa-user-astronaut"></i> Sign in</h2>
-            <form method="post">
+            <form method="POST">
                 {% csrf_token %}
-                <!-- {{form.as_p}} -->
-                <input type="hidden" name="csrfmiddlewaretoken"
-                    value="KwbBJ7CULMErgpSwxfUo319mqifAvnvFLx9E0C5TiuNSwD3tm5d25A3ZkKjNkUHY">
+                    {% if form.errors %}
+                        {% for field in form %}
+                            {{ field.errors }}
+                        </p>
+                        {% endfor %}
+                    {% endif %}
+                
                 <p>
                     <label for="id_username">
                         <i class="fas fa-user"></i> Username:
