@@ -3,6 +3,7 @@
 
 {% block content %}
 
+
 <head>
     <title>trial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,12 +18,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/apex.css' %}">
+    <link rel="stylesheet" href="{% static 'css/prince.css'%}">
     <link rel="stylesheet" href="{%static 'css/topgames.css'%}">
 
 </head>
 
-
+<style>
+ 
+</style>
 
 <body>
     <section class="hero">
@@ -31,7 +34,7 @@
                 <div class="lg">
                     <!-- <h2><a href="https://www.fortnite.com/?lang=en-US">madMAXs</a></h2> -->
                     <h2><a href="#">pandora's<sup>box</sup></a></h2>
-                    <a href="{% url 'carouseltest7'%}"><i class="fa-solid fa-arrow-left"></i></a>
+                    <a href="{% url 'home'%}"><i class="fa-solid fa-arrow-left"></i></a>
                 </div>
                 <nav>
                     <ul>
@@ -39,16 +42,16 @@
                         <li class="reviews"><a href="#">reviews</a></li>
                         <li class="chat"><a href="#">FAQ</a></li>
                         <li><a href="#">Chat</a></li>
-                        <li class="Download"><a  href="{% static 'files/apex.7z' %}" download="Apex Legends">Download</a></li>
+                        <li class="Download"><a href="{% static 'files\Prince Of Persia.7z' %}" download>Download</a></li>
                     </ul>
                 </nav>
             </header>
             <div class="content">
                 <div class="text">
                     <h6>#2 trending</h6>
-                    <h3><i class="fa-solid fa-biohazard"></i>Electronic Arts</h3>
-                    <h1>APEX LEGENDS</h1>
-                    <p>Apex Legends is a free-to-play battle royale-hero shooter game developed by Respawn Entertainment and published by Electronic Arts. </p>
+                    <h3><i class="fa-solid fa-biohazard"></i>Ubisoft</h3>
+                    <h1>Prince Of Persia</h1>
+                    <p>Dash into a stylish and thrilling action-adventure platformer game set in a mythological Persian world where the boundaries of time and space are yours to manipulate.</p>
                     <a href="#">play now</a>
 
                     <a href="#" class="trailer"><i class="fa-solid fa-play"></i>Watch GamePlay</a>
@@ -62,7 +65,7 @@
                     <a href="#"><i class="fa-brands fa-discord"></i></a>
                 </div>
                 <div class="image">
-                    <img src="{%static 'images/apex.png'%}">
+                    <img src="{% static 'images/prince.png'%}">
                 </div>
             </div>
         </div>
@@ -71,4 +74,4 @@
 </body>
 
 </html>
-{% endblock %}
+{%endblock%}

@@ -33,7 +33,7 @@
                 <div class="lg">
                     <!-- <h2><a href="https://www.fortnite.com/?lang=en-US">madMAXs</a></h2> -->
                     <h2><a href="#">pandora's<sup>box</sup></a></h2>
-                    <a href="{% url 'carouseltest7'%}"><i class="fa-solid fa-arrow-left"></i></a>
+                    <a href="{% url 'home'%}"><i class="fa-solid fa-arrow-left"></i></a>
                 </div>
                 <nav>
                     <ul>
@@ -41,7 +41,10 @@
                         <li class="reviews"><a href="#">reviews</a></li>
                         <li class="chat"><a href="#">FAQ</a></li>
                         <li><a href="#">Chat</a></li>
-                        <li class="Download"><a href="{% url static 'files/Fortnite.7z'%}">Download</a></li>
+
+                        <form action="{% url 'download_game' %}" method="POST">
+                            {% csrf_token %}
+                            <button class="download" type="submit" name='download_game', value="fortnite" href="{% static 'images/fort.png'%}" download>Download</button></form>
                     </ul>
                 </nav>
             </header>
@@ -49,10 +52,8 @@
                 <div class="text">
                     <h6>#1 trending</h6>
                     <h3><i class="fa-solid fa-biohazard"></i>Epic Games</h3>
-                    <h1>FORTNITE</h1>
-                    <p>Fortnite is an online video game and game platform developed by Epic Games and released in 2017.
-                        It is available in six distinct game mode versions that otherwise share the same general
-                        gameplay and game engine:</p>
+                    <h1>{{name}}</h1>
+                    <p>{{desc}}</p>
                     <a href="#">play now</a>
 
                     <a href="#" class="trailer"><i class="fa-solid fa-play"></i>Watch GamePlay</a>
@@ -66,15 +67,17 @@
                     <a href="#"><i class="fa-brands fa-discord"></i></a>
                 </div>
                 <div class="image">
-                    <img src="{% static 'images/fort.png' %}">
+                    <img src="data:image/jpeg;base64,{{image}}" alt="Image">
                 </div>
             </div>
         </div>
     </section>
 <!-- reviews -->
+{% if allow_reviews %}
 <form method = "POST">
     <input type="text">Reviews</input>
 </form>
+{% endif %}
 </body>
 
 </html>

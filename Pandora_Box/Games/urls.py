@@ -10,7 +10,7 @@ success_url = reverse_lazy('profile')
 urlpatterns = [
     path('', views.index, name='index'),
     path('about', views.about, name='about'),
-    path('carouseltest7', views.carouseltest7, name='carouseltest7'),
+    path('home', views.home, name='home'),
     path('community', views.community, name='community'),
     path('support', views.support, name='support'),
     path('base', views.base, name='base'),
@@ -21,4 +21,8 @@ urlpatterns = [
     path('prince', views.prince,name='prince'),
     path('signup',views.signup,name='signup'),
     path('profile/', views.profile, name='profile'),
+    path('signout',views.signout,name='signout'),
+    path('game_request',views.game_request,name='game_request'),
+    path('download_game',views.download_game,name='download_game'),
+
 ]

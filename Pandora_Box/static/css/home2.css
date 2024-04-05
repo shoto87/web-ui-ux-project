@@ -1,62 +1,6 @@
-.carousel-item h3 {
-    font-size: 60px;
-    line-height: 1;
-    color: white;
-    margin: 0px 0px 45px;
-    font-family: 'Permanent Marker', cursive;
-} 
-
-.carousel-caption .wish {
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 50px;
-    text-decoration: none;
-    color: black;
-
-}
-
-.carousel-caption .download {
-    border: 1px solid black;
-    padding: 10px;
-    border-radius: 50px;
-    text-decoration: none;
-    color: black;
-} 
-.carousel-caption:hover .wish {
-    background-color: rgba(255, 255, 255, 0.226);
-    color: black;
-    transition: .4s;
-} 
 
 
 
-.carousel-caption:hover .download {
-    background-color: rgba(255, 255, 255, 0.226);
-    color: black;
-    transition: .4s;
-}
-
-section div {
-    padding-top: 60px;
-} 
-
-.sections div ul {
-    text-align: center;
-
-}
-
-.sections div ul li div img{
-   
-   padding: 5px;
-
-}
-
-.sections div ul li:hover img {
-    transform: scale(1.05);
-    transition: .4s;
-   
-
-}
 
 .image-text {
     display: inline-block;

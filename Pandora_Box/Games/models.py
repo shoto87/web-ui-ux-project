@@ -14,8 +14,8 @@ class Product(models.Model):
         return self.product_name
 
 class Downloads(models.Model):
-    user = models.ForeignKey(User,on_delete=models.CASCADE)
-    product = models.ForeignKey(Product,on_delete=models.CASCADE)
+    user = models.CharField(max_length = 50)
+    product = models.CharField(max_length = 50,default = "")
 
 class Reviews(models.Model):
     user = models.ForeignKey(User,on_delete = models.CASCADE)

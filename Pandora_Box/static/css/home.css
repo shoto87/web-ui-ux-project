@@ -1,5 +1,6 @@
 body {
-    background: radial-gradient(circle, #1a1a1a, #000000);
+    /* background: radial-gradient(circle, #1a1a1a, #000000); */
+    background-color: white;
 }
 
 .lg h2 a {
@@ -184,8 +185,8 @@ ul li {
     border: 1px solid black;
 }
 
-.carousel-second .carousel {
-    height: 500px;
+.carousel-second .carousel{
+    height: 400px;
     width: auto;
 }
 
@@ -195,17 +196,7 @@ ul li {
 
 }
 
-.carousel-third .carousel {
-    height: 500px;
-    width: auto;
-  
-}
 
-.carousel-third img {
-    height: 250px;
-    width: auto;
-
-}
 
 .carousel-second .carousel-item button {
     border: 1px solid black;
@@ -253,6 +244,7 @@ ul li {
     transform: scale(1.2);
     transition: .4s;
     cursor: pointer;
+    box-shadow: 0 0 40px white;
 }
 
 .carousel-second .carousel-inner .carousel-item ul li:hover button {
@@ -308,4 +300,139 @@ form .btn {
     color: white;
     margin: 0px 0px 45px;
     font-family: 'Permanent Marker', cursive;
+}
+
+/* here is the responsive  */
+.carousel-second .carousel {
+    height: 400px;
+    width: auto;
+}
+
+.carousel-second img {
+    height: 250px;
+    width: auto;
+}
+
+.carousel-second .carousel-item button {
+    border: 1px solid black;
+    border-radius: 50px;
+    background: transparent;
+    padding: 10px;
+    font-size: 10px;
+    font-weight: 400;
+    opacity: 80%;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.game-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.game-buttons li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.carousel-second .carousel-inner .carousel-item ul li div:hover img {
+    transform: scale(1.2);
+    transition: .4s;
+    cursor: pointer;
+    box-shadow: 0 0 40px white;
+}
+
+.carousel-second .carousel-inner .carousel-item ul li:hover button {
+    background-color: white;
+    transition: .4s;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .carousel-second .carousel {
+        height: auto;
+        width: 100%;
+    }
+
+    .carousel-second img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .carousel-second .carousel-item button {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-second .carousel-inner .carousel-item ul li div:hover img {
+        transform: none;
+    }
+
+    .carousel-second .carousel-inner .carousel-item ul li:hover button {
+        background-color: transparent;
+    }
+}
+
+.carousel-item h3 {
+    font-size: 60px;
+    line-height: 1;
+    color: white;
+    margin: 0px 0px 45px;
+    font-family: 'Permanent Marker', cursive;
+} 
+
+.carousel-caption .wish {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+
+}
+
+.carousel-caption .download {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: black;
+} 
+.carousel-caption:hover .wish {
+    background-color: rgba(255, 255, 255, 0.226);
+    color: black;
+    transition: .4s;
+} 
+
+
+.carousel-caption:hover .download {
+    background-color: rgba(255, 255, 255, 0.226);
+    color: black;
+    transition: .4s;
+}
+
+section div {
+    padding-top: 60px;
+} 
+
+.sections div ul {
+    text-align: center;
+
+}
+
+.sections div ul li div img{
+   
+   padding: 5px;
+
+}
+
+.sections div ul li:hover img {
+    transform: scale(1.05);
+    transition: .4s;
+   
+
 }

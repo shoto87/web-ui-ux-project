@@ -76,6 +76,7 @@ STATIC_URL = "static/"
 
 WSGI_APPLICATION = 'Pandora_Box.wsgi.application'
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases

@@ -63,17 +63,15 @@
                 <img src="https://via.placeholder.com/250" alt="User Avatar">
             </div>
             <div class="user-details">
-                <h2>patrick</h2>
-                <p>Email: user@example.com</p>
-                <p>Location: City, Country</p>
-                <p>Joined: January 1, 2024</p>
-                <p>Favorite Games:</p>
+                <h2>Name: {{first_name}}</h2>
+                <p>Email: {{email}}</p>
                 <ul>
                     <li>Game 1</li>
                     <li>Game 2</li>
-                    <li>Game 3</li>
+                    <li>Game 3</li> 
                 </ul>
             </div>
+            <a href="{% url 'signout' %}"><button name="signout" type="submit"> Sign out</button></a>  
         </div>
     </div>
 </body>
