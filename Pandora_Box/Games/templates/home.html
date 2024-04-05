@@ -110,10 +110,20 @@ body{
   justify-content: center;
   align-items: center; */
 }
+#h2,#section1,#section0,#first-caro,#section4{
+  background-image: url("{%static 'images/section-wrapper-bg.png'%}");
+  background-size: cover;
+  /* background-color: white; */
+
+}
+#section4{
+  background-image: url("{%static 'images/shop-bg.jpg'%}");
+  background-size: cover;
+}
 
 </style>
 <body>
-    <div class="carousel-first">
+    <div id="first-caro" class="carousel-first">
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -137,7 +147,7 @@ body{
                                 in 2017. It is available in six distinct game mode versions that otherwise share the
                                 same general gameplay and game engine:</p>
                             <a class="wish" href="#"><i class="fa-solid fa-heart" onclick="change(this)"></i> add to
-                                wishlist</a>
+                                wishlist</a><br><br>
                             <!-- <a href="{% url 'fort' %}"><button onclick="fort()">download <i
                                         class="fa-solid fa-download"></i></button></a> -->
                             <form action="{% url 'game_request' %}" method="GET">
@@ -156,8 +166,14 @@ body{
                             <p>Apex Legends is a free-to-play battle royale-hero shooter game developed by Respawn
                                 Entertainment and published by Electronic Arts.</p>
                             <a class="wish" href="#"><i class="fa-solid fa-heart" onclick="change(this)"></i> add to
-                                wishlist</a>
-                            <a class="download" href="{% url 'apex' %}"><i class="fa-solid fa-download"></i>download</a>
+                                wishlist</a><br><br>
+                            <!-- <a class="download" href="{% url 'apex' %}"><i class="fa-solid fa-download"></i>download</a> -->
+
+                            <form action="{% url 'game_request' %}" method="GET">
+                              <button class="download" type="submit" name="game_type", value="Apex Legends"><i class="fa-solid fa-download"></i>Download</button>
+                          </form>
+
+
                             <!-- <a href="{% url 'apex' %}"><button onclick="apex()">download <i
                                     class="fa-solid fa-download"></i></button></a> -->
                             <!-- <a href="{% url 'apex' %}"><button onclick="apex()">wishlist<i
@@ -175,10 +191,9 @@ body{
                             <p>Dash into a stylish and thrilling action-adventure platformer game set in a mythological
                                 Persian world where the boundaries of time and space are yours to manipulate.</p>
                             <a class="wish" href="#"><i class="fa-solid fa-heart" onclick="change(this)"></i> add to
-                                wishlist</a>
-                            <a class="download" href="{% url 'lol' %}"><i class="fa-solid fa-download"></i>download</a>
-                            <!-- <a href="{% url 'lol' %}"> <button onclick="lol()">download <i
-                                    class="fa-solid fa-download"></i></button></a> -->
+                                wishlist</a><br><br>
+                                <form action="{% url 'game_request' %}" method="GET">
+                                  <button class="download" type="submit" name="game_type", value="League Of Legends"><i class="fa-solid fa-download"></i>Download</button>
                         </div>
                     </div>
                 </div>
@@ -192,12 +207,10 @@ body{
                             <p>Dash into a stylish and thrilling action-adventure platformer game set in a mythological
                                 Persian world where the boundaries of time and space are yours to manipulate.</p>
                             <a class="wish" href="#"><i class="fa-solid fa-heart" onclick="change(this)"></i> add to
-                                wishlist</a>
-                            <a class="download" href="{% url 'prince' %}"><i
-                                    class="fa-solid fa-download"></i>download</a>
-                            <!-- <a href="{% url 'prince' %}"><button onclick="prince()">download <i
-                                    class="fa-solid fa-download"></i></button> -->
-                            </a>
+                                wishlist</a><br><br>
+                                <form action="{% url 'game_request' %}" method="GET">
+                                  <button class="download" type="submit" name="game_type", value="Prince Of Persia"><i class="fa-solid fa-download"></i>Download</button></form>
+                           
                         </div>
                     </div>
                 </div>
@@ -216,7 +229,7 @@ body{
         </div>
     </div>
     <div class="new">
-        <h2 class="h2 section-title">
+        <h2 id="h2" class="h2 section-title">
           Trending & <span class="span">Games</span>
         </h2>
       </div>

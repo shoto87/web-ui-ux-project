@@ -24,5 +24,6 @@ urlpatterns = [
     path('signout',views.signout,name='signout'),
     path('game_request',views.game_request,name='game_request'),
     path('download_game',views.download_game,name='download_game'),
+    path('success_reviews',views.success_reviews,name='success_reviews'),
 
 ]

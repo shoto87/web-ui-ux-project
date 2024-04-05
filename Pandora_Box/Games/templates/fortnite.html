@@ -19,10 +19,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/fort.css' %}">
     <link rel="stylesheet" href="{% static 'css/topgames.css'%}">
+    <link rel="stylesheet" href="{% static 'css/reviews.css'%}">
 
 </head>
 <style>
-   
+  
+
 </style>
 
 
@@ -74,9 +76,13 @@
     </section>
 <!-- reviews -->
 {% if allow_reviews %}
-<form method = "POST">
-    <input type="text">Reviews</input>
-</form>
+<div class="review1">
+    <form action="{% url 'success_reviews' %}">
+        <input type="text">
+        <a href="#"> <button type="submit">Reviews</button>
+        </a>
+    </form>
+</div>
 {% endif %}
 </body>
 

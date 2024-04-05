@@ -49,7 +49,7 @@
                             {{first_name}}</i></button></a>
                     {% else %}
                         <a href="{% url 'signup' %}"><button class="btn btn-sm btn-outline-secondary" type="button"> <i class="fa-solid fa-user-astronaut"> 
-                            user
+                            log in
                         </i></button></a>
                     {% endif %}
 
@@ -71,6 +71,10 @@
                     <li class="nav-item">
                         <a id="support" class="nav-link active" aria-current="page" href="#"></a>
                     </li>
+                    <!-- <a href="{% url 'signup' %}"><button class="btn btn-sm btn-outline-secondary" type="button">  out</button></a> -->
+
+                    <a href="{% url 'signout' %}"><button class="btn btn-sm btn-outline-secondary" name="signout" type="submit">sign out</button></a> 
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">

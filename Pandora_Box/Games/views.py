@@ -37,9 +37,13 @@ def login(request):
 # till here
 
 def index(request):
-    products = Product.objects.all()
-    print(request.GET)
-    return render(request, 'home.html')
+    params={}
+    if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+    }
+    return render(request, 'home.html',params)
 
 def signout(request):
     logout(request)    
@@ -104,31 +108,88 @@ def download_game(request):
         downloads  = Downloads.objects.create(product = game_name,user = request.user.first_name)
         downloads.save()
     print(game_name)
-    return render(request,game_name+'.html')
+    return render(request,'success_download.html')
 
 def about(request):
-    return render(request, 'about.html')
+    params={}
+    if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+    }
+    return render(request, 'about.html',params)
+
+def success_reviews(request):
+    params={}
+    if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+    }
+    return render(request, 'success_reviews.html',params)
 
 def home(request):
-    return render(request, 'home.html')
+    params={}
+    if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+        }
+    return render(request, 'home.html',params)
 
 def community(request):
-    return render(request, 'community.html')
+    params={}
+    if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+        }
+    return render(request, 'community.html',params)
 
 def support(request):
-    return render(request, 'support.html')
+    params={}
+    if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+        }
+    return render(request, 'support.html',params)
 
 def base(request):
-    return render(request, 'base.html')
+    params={}
+    if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+        }
+    return render(request, 'base.html',params)
 
   
 
 def apex(request):
-     return render(request,'Apex Legends.html')
+    params={}
+    if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+        }
+    return render(request,'Apex Legends.html',params)
 
 def prince(request):
-    return render(request,'Prince Of Persia.html')
+    params={}
+    if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+        }
+    return render(request,'Prince Of Persia.html',params)
 
 def lol(request):
-    return render(request,'League Of Legends.html')
+    params={}
+    if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+        }
+    return render(request,'League Of Legends.html',params)
 

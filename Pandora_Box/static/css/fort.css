@@ -142,7 +142,7 @@ nav ul li.Download:hover a {
 }
 
 .content .text a:hover {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     border: 1px solid#f5dca8;
     background: transparent;
     color: white;
@@ -185,7 +185,7 @@ nav ul li.Download:hover a {
 .content .apps a:hover {
     transition: .4s;
     color: white;
-    transform: scale(1.8);
+    /* transform: scale(1.8); */
 
 }
 

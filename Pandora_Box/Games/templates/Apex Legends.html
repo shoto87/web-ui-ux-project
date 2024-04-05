@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/apex.css' %}">
     <link rel="stylesheet" href="{%static 'css/topgames.css'%}">
+    <link rel="stylesheet" href="{% static 'css/reviews.css'%}">
+
 
 </head>
 
@@ -39,7 +41,12 @@
                         <li class="reviews"><a href="#">reviews</a></li>
                         <li class="chat"><a href="#">FAQ</a></li>
                         <li><a href="#">Chat</a></li>
-                        <li class="Download"><a  href="{% static 'files/apex.7z' %}" download="Apex Legends">Download</a></li>
+                        <!-- <li class="Download"><a  href="{% static 'files/apex.7z' %}" download="Apex Legends">Download</a></li> -->
+
+                        <form action="{% url 'download_game' %}" method="POST">
+                            {% csrf_token %}
+                            <button class="download" type="submit" name='download_game', value="Apex Legends" href="{% static 'images/apex.png'%}" download>Download</button></form>
+
                     </ul>
                 </nav>
             </header>
@@ -47,8 +54,8 @@
                 <div class="text">
                     <h6>#2 trending</h6>
                     <h3><i class="fa-solid fa-biohazard"></i>Electronic Arts</h3>
-                    <h1>APEX LEGENDS</h1>
-                    <p>Apex Legends is a free-to-play battle royale-hero shooter game developed by Respawn Entertainment and published by Electronic Arts. </p>
+                    <h1>{{name}}</h1>
+                    <p>{{desc}} </p>
                     <a href="#">play now</a>
 
                     <a href="#" class="trailer"><i class="fa-solid fa-play"></i>Watch GamePlay</a>
@@ -67,7 +74,16 @@
             </div>
         </div>
     </section>
-
+<!-- reviews -->
+{% if allow_reviews %}
+<div class="review1">
+    <form action="{% url 'success_reviews' %}">
+        <input type="text">
+        <a href="#"> <button type="submit">Reviews</button>
+        </a>
+    </form>
+</div>
+{% endif %}
 </body>
 
 </html>

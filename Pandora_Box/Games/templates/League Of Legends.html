@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="{%static 'css/lol.css'%}">
     <link rel="stylesheet" href="{%static 'css/topgames.css'%}">
     <link rel="stylesheet" href="{%static 'css/topgames.css'%}">
+    <link rel="stylesheet" href="{% static 'css/reviews.css'%}">
+
 
 </head>
 
@@ -42,7 +44,11 @@
                         <li class="reviews"><a href="#">reviews</a></li>
                         <li class="chat"><a href="#">FAQ</a></li>
                         <li><a href="#">Chat</a></li>
-                        <li class="Download"><a href="{% static 'files/League Of Legends.7z'%}" download="">Download</a></li>
+
+                        <form action="{% url 'download_game' %}" method="POST">
+                            {% csrf_token %}
+                            <button class="download" type="submit" name='download_game', value="League Of Legends" href="{% static 'images/lol.png'%}" download>Download</button></form>
+
                     </ul>
                 </nav>
             </header>
@@ -50,8 +56,8 @@
                 <div class="text">
                     <h6>#2 trending</h6>
                     <h3><i class="fa-solid fa-biohazard"></i>Riot</h3>
-                    <h1>league of legends</h1>
-                    <p>Dash into a stylish and thrilling action-adventure platformer game set in a mythological Persian world where the boundaries of time and space are yours to manipulate.</p>
+                    <h1>{{name}}</h1>
+                    <p>{{desc}}</p>
                     <a href="#">play now</a>
 
                     <a href="#" class="trailer"><i class="fa-solid fa-play"></i>Watch GamePlay</a>
@@ -70,6 +76,18 @@
             </div>
         </div>
     </section>
+
+    <!-- reviews -->
+{% if allow_reviews %}
+<div class="review1">
+    <form action="{% url 'success_reviews' %}">
+        <input type="text">
+        <a href="#"> <button type="submit">Reviews</button>
+        </a>
+    </form>
+</div>
+{% endif %}
+</body>
 
 </body>
 

@@ -1,0 +1,32 @@
+.review1 form  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: aliceblue;
+    input{
+        width: auto;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    button{
+        border-radius: 10px;
+        border: 1px solid black;
+        padding: 5px;
+     
+       background-color: #198653;
+    }
+    
+
+   }
+   nav ul form .download{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    background: transparent;
+   }
+   nav ul form .download:hover{
+    background-color: black;
+    color: white;
+   }
