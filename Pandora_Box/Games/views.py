@@ -15,10 +15,64 @@ from .forms import ProfileForm,DownloadForm
 
 from django.urls import reverse_lazy
 
+from django.shortcuts import render
+from .models import Review
+
+def review_list(request):
+    reviews = Review.objects.all()
+    return render(request, 'review_list.html', {'reviews': reviews})
+
+
+
+from django.shortcuts import render
+from .models import Review
+
+from django.http import JsonResponse
+
+def review_list(request):
+    reviews = Review.objects.all()
+    print(reviews)  # Print reviews to the console for debugging
+    return render(request, 'review_list.html', {'reviews': reviews})
+
+def success_reviews(request):
+    if request.method == 'POST':
+        user = request.user
+        product_id = request.POST.get('product_id')  # Assuming you're passing product_id in the form
+        product = Product.objects.get(id=product_id)
+        text = request.POST.get('review_content')
+        
+        # Save the review
+        review = Reviews.objects.create(user=user, product=product, text=text)
+        
+        # Prepare the response data
+        response_data = {
+            'user': user.username,
+            'text': text,
+        }
+        
+        return JsonResponse(response_data)
+    else:
+        # Handle other request methods if needed
+        pass
+
+
+def your_view(request):
+    reviews = Review.objects.all()  # Assuming you have a Review model
+    allow_reviews = True  # Assuming this variable is passed to the template
+    return render(request, 'Apex Legends.html', {'reviews': reviews, 'allow_reviews': allow_reviews})
+
+
 success_url = reverse_lazy('profile')
 
 
 def login(request):
+    params={}
+    if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+        }
+        
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
         if form.is_valid():
@@ -53,18 +107,31 @@ def signout(request):
 
 
 def signup(request):
-    if request.method == 'POST':
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('login') 
-    else:
-        form = SignUpForm()
-    return render(request, 'loginpage.html', {'form': form})
+ params={}
+ if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+        } 
+        if request.method == 'POST':
+            form = SignUpForm(request.POST)
+            if form.is_valid():
+                form.save()
+                return redirect('login') 
+        else:
+         form = SignUpForm()
+        return render(request, 'loginpage.html', {'form': form})
 
 @login_required
 def profile(request):
-    return render(request,'profile.html')
+ params={}
+ if request.user.is_authenticated:
+        first_name = request.user.first_name
+        params={
+        'first_name' :  first_name,
+        }    
+        return render(request,'profile.html')
+
 
 
 def fort(request):
@@ -105,8 +172,9 @@ def game_request(request):
 def download_game(request):
     if request.method == 'POST':
         game_name = request.POST.get('download_game','')
-        downloads  = Downloads.objects.create(product = game_name,user = request.user.first_name)
-        downloads.save()
+    if request.user.is_authenticated:
+            downloads  = Downloads.objects.create(product = game_name,user = request.user.first_name)
+            downloads.save()
     print(game_name)
     return render(request,'success_download.html')
 

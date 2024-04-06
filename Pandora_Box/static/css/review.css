@@ -1,0 +1,15 @@
+.reviews {
+    background: transparent;
+}
+#view-reviews{
+    border: 1px solid white;
+    padding: 8px;
+    border-radius: 50px ;
+    text-decoration: double;
+    color: white;
+}
+#view-reviews:hover{
+    background-color: white;
+    color: black;
+    transition: .5s;
+}

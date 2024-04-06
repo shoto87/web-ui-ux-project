@@ -7,43 +7,114 @@
     {% block title %} <title>Community</title>{% endblock %}
     <link rel="stylesheet" href="{% static 'css/common.css' %}">
     <link rel="stylesheet" href="{% static 'css/community.css' %}">
+    <link rel="stylesheet" href="{%static 'css/style333.css'%}">
+
 
 </head>
-
+<style>
+    .section,body{
+        background-image: url("{%static 'images/hero-bg.jpg'%}");
+    }
+</style>
 
 
 <body>
-    <div class="container">
-        <h1>Community</h1>
-        <div class="social-media">
-            <a href="https://www.facebook.com">Facebook</a>
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://www.instagram.com">Instagram</a>
-            <!-- Add more social media links as needed -->
+    <article class="new">
+        <section class="section hero" id="home" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Pandora<sup>Box</sup> Gaming</p>
+
+            <h1 class="h1 hero-title">
+              Create <span class="span">Manage</span> Matches
+            </h1>
+
+            <p class="hero-text">
+              Find technology or people for digital projects in public sector and Find an individual specialist develope
+              researcher.
+            </p>
+
+            <button class="btn skewBg">Read More</button>
+
+          </div>
+
+          <figure class="hero-banner img-holder" style="--width: 700; --height: 700;">
+            <img src="{%static 'images/hero-banner.png'%}" width="700" height="700" alt="hero banner" class="w-100">
+          </figure>
+
         </div>
-        <div class="details">
-            <h2>About Our Community</h2>
-            <p>Welcome to our vibrant gaming community! Here, you'll find passionate gamers from around the world
-                sharing their experiences, tips, and tricks. Whether you're a casual player or a hardcore gamer, our
-                community has something for everyone.</p>
-            <p>Connect with fellow gamers, join discussions, and stay updated on the latest news and events in the
-                gaming world. Don't forget to follow us on social media to stay connected!</p>
+      </section>
+      <section class="section brand" aria-label="brand">
+        <div class="container">
+
+          <ul class="has-scrollbar">
+
+            <li class="brand-item">
+              <img src="{%static 'images/brand-1.png'%}" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="{%static 'images/brand-2.png'%}" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="{%static 'images/brand-3.png'%}" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="{%static 'images/brand-4.png'%}" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="{%static 'images/brand-5.png'%}" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="{%static 'images/brand-6.png'%}" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+          </ul>
+
         </div>
-        <div class="screenshot">
-            <h2>Xbox Games Screenshots</h2>
-            <video autoplay muted loop id="myVideo">
-                <source src="{% static 'video/modern_combat.mp4'%}" type="video/mp4">
-            </video>
-            <img src="{% static 'images/screenshots/Asphalt 9_ Legends 01_11_2018 6_26_58 PM (2).png' %}" alt="Screenshot 1">
-            <img src="{% static 'images/screenshots/Dead Rivals - Zombie MMO 12_12_2018 7_24_37 PM.png' %}" alt="Screenshot 1">
-            <img src="{% static 'images/screenshots/Modern Combat Versus 19_10_2018 6_50_51 PM.png' %}" alt="Screenshot 1">
-            <img src="{% static 'images/screenshots/Dead Rivals - Zombie MMO 12_12_2018 7_44_18 PM.png' %}" alt="Screenshot 1">
-            <img src="{% static 'images/screenshots/Modern Combat Versus 11_12_2018 5_43_15 PM.png' %}" alt="Screenshot 1">
-            <video autoplay muted loop id="myVideo">
-                <source src="{% static '#' %}" type="video/mp4">
-            </video>
-            <!-- Add more screenshots as needed -->
+      </section>
+
+      <section>
+        <div class="container">
+            <h1>Community</h1>
+            <div class="social-media">
+                <a href="https://www.facebook.com">Facebook</a>
+                <a href="https://twitter.com">Twitter</a>
+                <a href="https://www.instagram.com">Instagram</a>
+                <!-- Add more social media links as needed -->
+            </div>
+            <div class="details">
+                <h2>About Our Community</h2>
+                <p>Welcome to our vibrant gaming community! Here, you'll find passionate gamers from around the world
+                    sharing their experiences, tips, and tricks. Whether you're a casual player or a hardcore gamer, our
+                    community has something for everyone.</p>
+                <p>Connect with fellow gamers, join discussions, and stay updated on the latest news and events in the
+                    gaming world. Don't forget to follow us on social media to stay connected!</p>
+            </div>
+            <div class="screenshot">
+                <h2>Xbox Games Screenshots</h2>
+                <video autoplay muted loop id="myVideo">
+                    <source src="{% static 'video/modern_combat.mp4'%}" type="video/mp4">
+                </video>
+                <img src="{% static 'images/screenshots/Asphalt 9_ Legends 01_11_2018 6_26_58 PM (2).png' %}" alt="Screenshot 1">
+                <img src="{% static 'images/screenshots/Dead Rivals - Zombie MMO 12_12_2018 7_24_37 PM.png' %}" alt="Screenshot 1">
+                <img src="{% static 'images/screenshots/Modern Combat Versus 19_10_2018 6_50_51 PM.png' %}" alt="Screenshot 1">
+                <img src="{% static 'images/screenshots/Dead Rivals - Zombie MMO 12_12_2018 7_44_18 PM.png' %}" alt="Screenshot 1">
+                <img src="{% static 'images/screenshots/Modern Combat Versus 11_12_2018 5_43_15 PM.png' %}" alt="Screenshot 1">
+                <video autoplay muted loop id="myVideo">
+                    <source src="{% static '#' %}" type="video/mp4">
+                </video>
+                <!-- Add more screenshots as needed -->
+            </div>
         </div>
-    </div>
+      </section>
+    </article>
+    
 </body>
 {% endblock %}

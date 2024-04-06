@@ -4,7 +4,7 @@
 {% block content %}
 
 <head>
-    <title>trial</title>
+    <title>Apex Legends</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:ital,wght@0,
@@ -20,10 +20,13 @@
     <link rel="stylesheet" href="{% static 'css/apex.css' %}">
     <link rel="stylesheet" href="{%static 'css/topgames.css'%}">
     <link rel="stylesheet" href="{% static 'css/reviews.css'%}">
+    <link rel="stylesheet" href="{%static 'css/review.css'%}">
 
 
 </head>
-
+<style>
+   
+</style>
 
 
 <body>
@@ -38,15 +41,44 @@
                 <nav>
                     <ul>
                         <li class="games"><a href="#">Games</a></li>
-                        <li class="reviews"><a href="#">reviews</a></li>
+                        <li class="games"><a href="#"> </a></li>
+                        <!-- <li class="reviews">
+                            {% if allow_reviews %}
+                            
+                            <form class="reviews1" action="{% url 'success_reviews' %}">
+                                <input type="text" required placeholder="enter your review...">
+                                <a href="#"> <button type="submit">Review</button>
+                                </a>
+                            </form>
+                        
+                        {% endif %}
+                    </li>   -->
+                    <!-- Inside your template -->
+                    {% if allow_reviews %}
+<li class="reviews">
+    <ul id="review-list">
+        {% for review in reviews %}
+            <li>
+                <!-- <strong>{{ review.user }}</strong>: {{ review.text }} -->
+                <!-- review sent -->
+            </li>
+        {% endfor %}
+    </ul>
+    <form class="reviews1" id="review-form" action="{% url 'success_reviews' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" required placeholder="Enter your review..." name="review_content" id="review-input">
+        <button type="submit">send review</button>
+    </form>
+</li>
+{% endif %}
+<a id="view-reviews" href="{% url 'review_list' %}">reviews</a>
+
+
                         <li class="chat"><a href="#">FAQ</a></li>
                         <li><a href="#">Chat</a></li>
                         <!-- <li class="Download"><a  href="{% static 'files/apex.7z' %}" download="Apex Legends">Download</a></li> -->
 
-                        <form action="{% url 'download_game' %}" method="POST">
-                            {% csrf_token %}
-                            <button class="download" type="submit" name='download_game', value="Apex Legends" href="{% static 'images/apex.png'%}" download>Download</button></form>
-
+                       
                     </ul>
                 </nav>
             </header>
@@ -56,7 +88,11 @@
                     <h3><i class="fa-solid fa-biohazard"></i>Electronic Arts</h3>
                     <h1>{{name}}</h1>
                     <p>{{desc}} </p>
-                    <a href="#">play now</a>
+                    <form action="{% url 'download_game' %}" method="POST">
+                        {% csrf_token %}
+                        <button class="download" type="submit" name='download_game' , value="Apex Legends"
+                            href="{% static 'images/apex.png'%}" download>Download</button>
+                    </form>
 
                     <a href="#" class="trailer"><i class="fa-solid fa-play"></i>Watch GamePlay</a>
                 </div>
@@ -73,18 +109,25 @@
                 </div>
             </div>
         </div>
+
     </section>
-<!-- reviews -->
-{% if allow_reviews %}
-<div class="review1">
-    <form action="{% url 'success_reviews' %}">
-        <input type="text">
-        <a href="#"> <button type="submit">Reviews</button>
-        </a>
-    </form>
-</div>
-{% endif %}
+    <!-- reviews -->
+    
+
+    {% if allow_reviews %}
+    <div class="review1">
+        <form action="{% url 'success_reviews' %}">
+            <input type="text" placeholder="any suggestions?">
+            <a href="#"> <button type="submit">send</button>
+            </a>
+        </form>
+    </div>
+    {% endif %}
 </body>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{%static 'js/review.js'%}"></script>
+
 
 </html>
 {% endblock %}

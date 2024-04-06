@@ -1,32 +1,39 @@
-.review1 form  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: aliceblue;
+
+nav ul li .reviews1{
     input{
-        width: auto;
-        border: 1px solid black;
         padding: 5px;
-        border-radius: 10px;
     }
     button{
-        border-radius: 10px;
-        border: 1px solid black;
-        padding: 5px;
-     
-       background-color: #198653;
-    }
-    
+        padding: 8px;
+        border-radius: 50px;
+        background: transparent;
+        border: 1px solid white;
+        color: white;
 
-   }
-   nav ul form .download{
-    border: 1px solid black;
-    padding: 5px;
-    border-radius: 10px;
-    background: transparent;
-   }
-   nav ul form .download:hover{
-    background-color: black;
-    color: white;
-   }
+        
+
+    }
+}
+nav ul li .reviews1 button:hover{
+            background-color: white;
+            color: black;
+            transition: .5s;
+            padding-left: 13px;
+            padding-right: 13px;
+        }
+
+        .text form .download{
+            padding: 5px;
+            border-radius: 50px;
+        background: transparent;
+        border: 1px solid white;
+        color: white;
+
+        }
+        .text form .download:hover{
+            background-color: white;
+            color: black;
+            transition: .5s;
+            padding-left: 13px;
+            padding-right: 13px;
+        }

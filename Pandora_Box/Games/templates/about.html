@@ -7,11 +7,106 @@
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
     <!-- <link rel="stylesheet" href="{% static 'css/common.css' %}"> -->
     <script src="{% static 'community.js' %}"></script>
+    <link rel="stylesheet" href="{%static 'css/style333.css'%}">
+
     <title>About Developers</title>
 </head>
-
+<style>
+     .section{
+        background-image: url("{%static 'images/hero-bg.jpg'%}");
+    }
+</style>
 <body>
-    <div class="container">
+    <article class="new">
+        <section class="section hero" id="home" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Pandora<sup>Box</sup> Gaming</p>
+
+            <h1 class="h1 hero-title">
+              Patrick <span class="span">K.</span>
+            </h1>
+
+            <p class="hero-text">
+              Find technology or people for digital projects in public sector and Find an individual specialist develope
+              researcher.
+            </p>
+
+            <button class="btn skewBg">Read More</button>
+
+          </div>
+
+          <figure class="hero-banner img-holder" style="--width: 700; --height: 700;">
+            <img src="{%static 'images/patrick1.png'%}" width="700" height="700" alt="hero banner" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+      <section class="section hero" id="home" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Pandora<sup>Box</sup> Gaming</p>
+
+            <h1 class="h1 hero-title">
+              ABZ <span class="span">S.</span>
+            </h1>
+
+            <p class="hero-text">
+              Find technology or people for digital projects in public sector and Find an individual specialist develope
+              researcher.
+            </p>
+
+            <button class="btn skewBg">Read More</button>
+
+          </div>
+
+          <figure class="hero-banner img-holder" style="--width: 700; --height: 700;">
+            <img src="{%static 'images/abz1.png'%}" width="700" height="700" alt="hero banner" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+      <section class="section brand" aria-label="brand">
+        <div class="container">
+
+          <ul class="has-scrollbar">
+
+            <li class="brand-item">
+              <img src="{%static 'images/brand-1.png'%}" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="{%static 'images/brand-2.png'%}" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="{%static 'images/brand-3.png'%}" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="{%static 'images/brand-4.png'%}" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="{%static 'images/brand-5.png'%}" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+            <li class="brand-item">
+              <img src="{%static 'images/brand-6.png'%}" width="90" height="90" loading="lazy" alt="brand logo">
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      
+    </article>
+    <!-- <div class="container">
         <h1>About Developers</h1>
         <div class="developer">
             <img src="{% static 'images/patrick1.png' %}" alt="Developer 1">
@@ -25,6 +120,6 @@
             <p>Developer</p>
             <p>Nulla euismod justo at odio aliquet, vel efficitur nunc efficitur. Vestibulum et lectus tincidunt, fermentum lacus quis, lacinia dolor.</p>
         </div>
-    </div>
+    </div> -->
 </body>
 {% endblock %}

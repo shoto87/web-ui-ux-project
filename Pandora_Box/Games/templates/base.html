@@ -22,16 +22,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{%static 'css/home.css'%}">
     <script src="{% static 'js/carouseltest6.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/toggle.css' %}">
-    <link rel="stylesheet" href="{%static 'css/base.css'%}">
+    <!-- <link rel="stylesheet" href="{% static 'css/toggle.css' %}"> -->
+    <!-- <link rel="stylesheet" href="{%static 'css/base.css'%}"> -->
     <link rel="stylesheet" href="{%static 'css\base_footer.css' %}">
     <link rel="stylesheet" href="{%static 'css/style333.css'%}">
+
+
+
+
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+ 
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
     
     {% block title %}
     {% endblock %}
 </head>
-
+<style>
+ 
+</style>
 <body>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" data-bs-theme="dark">
@@ -48,7 +65,7 @@
                         <a href="{% url 'profile' %}"><button class="btn btn-sm btn-outline-secondary" type="button"> <i class="fa-solid fa-user-astronaut"> 
                             {{first_name}}</i></button></a>
                     {% else %}
-                        <a href="{% url 'signup' %}"><button class="btn btn-sm btn-outline-secondary" type="button"> <i class="fa-solid fa-user-astronaut"> 
+                        <a href="{% url 'login' %}"><button class="btn btn-sm btn-outline-secondary" type="button"> <i class="fa-solid fa-user-astronaut"> 
                             log in
                         </i></button></a>
                     {% endif %}
@@ -163,7 +180,7 @@
                     <a href="#" class="logo">Pandora<sup>box</sup></a>
           
                     <p class="footer-text">
-                      Gamics marketplace the relase etras thats sheets continig passag.
+                     Pandora box is gaming place where gamers can find their own choice of games 
                     </p>
           
                     <ul class="contact-list">
@@ -173,9 +190,7 @@
                           <ion-icon name="location"></ion-icon>
                         </div>
           
-                        <address class="item-text">
-                          Address : PO Box W75 Street lan West new queens
-                        </address>
+                       
                       </li>
           
                       <li class="contact-item">
@@ -254,58 +269,7 @@
           
                   </ul>
           
-                  <div class="footer-wrapper">
-          
-                    <div class="social-wrapper">
-          
-                      <p class="footer-list-title">Follow Us</p>
-          
-                      <ul class="social-list">
-          
-                        <li>
-                          <a href="#" class="social-link" style="background-color: #3b5998">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                          </a>
-                        </li>
-          
-                        <li>
-                          <a href="#" class="social-link" style="background-color: #55acee">
-                            <ion-icon name="logo-twitter"></ion-icon>
-                          </a>
-                        </li>
-          
-                        <li>
-                          <a href="#" class="social-link" style="background-color: #d71e18">
-                            <ion-icon name="logo-pinterest"></ion-icon>
-                          </a>
-                        </li>
-          
-                        <li>
-                          <a href="#" class="social-link" style="background-color: #1565c0">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                          </a>
-                        </li>
-          
-                      </ul>
-          
-                    </div>
-          
-                    <div class="footer-newsletter">
-          
-                      <p class="footer-list-title">Newsletter Sign Up</p>
-          
-                      <form action="" class="footer-newsletter">
-                        <input type="email" name="email_address" aria-label="email" placeholder="Enter your email" required
-                          class="email-field">
-          
-                        <button type="submit" class="footer-btn" aria-label="submit">
-                          <ion-icon name="rocket"></ion-icon>
-                        </button>
-                      </form>
-          
-                    </div>
-          
-                  </div>
+                
           
                 </div>
               </div>
