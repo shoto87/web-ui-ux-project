@@ -76,8 +76,8 @@
                         {% csrf_token %}
                         <button class="download" type="submit" name='download_game', value="fortnite" href="{% static 'images/fort.png'%}" download>Download</button></form>
               
-                    <a href="#" class="trailer"><i class="fa-solid fa-play"></i>Watch GamePlay</a>
-                </div>
+                        <a href="{%url 'community'%}" class="trailer"><i class="fa-solid fa-play"></i>Watch GamePlay</a>
+                    </div>
                 <div class="apps">
                     <a href="#"><i class="fa-brands fa-windows"></i></a>
                     <a href="#"><i class="fa-brands fa-apple"></i></a>

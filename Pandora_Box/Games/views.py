@@ -107,12 +107,7 @@ def signout(request):
 
 
 def signup(request):
- params={}
- if request.user.is_authenticated:
-        first_name = request.user.first_name
-        params={
-        'first_name' :  first_name,
-        } 
+
         if request.method == 'POST':
             form = SignUpForm(request.POST)
             if form.is_valid():
